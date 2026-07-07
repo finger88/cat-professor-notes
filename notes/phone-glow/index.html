@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小猫解释万物：手机为什么会发光</title>
+  <style>
+    :root {
+      --ink: #332a24;
+      --soft-ink: #67594f;
+      --paper: #fff8e8;
+      --line: #ead9b8;
+      --mint: #dff3e7;
+      --peach: #ffd9c8;
+      --sky: #d9ecff;
+      --berry: #d7657b;
+      --gold: #f2b84b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        linear-gradient(90deg, rgba(234, 217, 184, .42) 1px, transparent 1px) 0 0 / 54px 54px,
+        linear-gradient(rgba(234, 217, 184, .55) 1px, transparent 1px) 0 0 / 54px 54px,
+        #f6ecd2;
+    }
+
+    main {
+      width: min(1080px, 100vw);
+      margin: 0 auto;
+      padding: 44px 42px 64px;
+      background: var(--paper);
+      box-shadow: 0 0 0 1px rgba(96, 72, 44, .08), 0 24px 80px rgba(96, 72, 44, .18);
+    }
+
+    .tape {
+      display: inline-block;
+      padding: 14px 28px;
+      margin-bottom: 18px;
+      background: var(--mint);
+      transform: rotate(-1.2deg);
+      border: 3px solid rgba(51, 42, 36, .12);
+      font-size: 30px;
+      color: var(--soft-ink);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 10px 0 24px;
+      font-size: 64px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 58px 0 18px;
+      padding-left: 20px;
+      border-left: 12px solid var(--gold);
+      font-size: 44px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    p, li {
+      font-size: 36px;
+      line-height: 1.66;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
+    strong {
+      color: #b9445b;
+      font-weight: 900;
+    }
+
+    .note {
+      margin: 28px 0;
+      padding: 26px 30px;
+      background: #fff;
+      border: 4px solid rgba(51, 42, 36, .12);
+      border-radius: 8px;
+      box-shadow: 8px 8px 0 rgba(242, 184, 75, .22);
+    }
+
+    .scene {
+      margin: 52px 0;
+      padding: 26px;
+      background: rgba(255, 255, 255, .72);
+      border: 4px solid rgba(51, 42, 36, .11);
+      border-radius: 8px;
+    }
+
+    .scene img,
+    .mind img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 4px solid rgba(51, 42, 36, .16);
+      background: #fff;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: var(--peach);
+      color: #6b3e32;
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .board {
+      margin: 28px 0;
+      padding: 30px 34px;
+      background: var(--sky);
+      border-radius: 8px;
+      border: 3px dashed rgba(51, 42, 36, .22);
+    }
+
+    .board ol {
+      padding-left: 48px;
+      margin: 0;
+    }
+
+    .quote {
+      margin-top: 46px;
+      padding: 34px;
+      background: #ffe7ec;
+      border-left: 14px solid var(--berry);
+      border-radius: 8px;
+      font-size: 40px;
+      line-height: 1.55;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="tape">Professor Meow's notebook</div>
+    <h1>小猫解释万物：手机为什么会发光</h1>
+
+    <section class="note">
+      <p><strong>在我们的世界里，那其实是……一群住在屏幕小房间里的发光小猫，被电池小猫送来的能量轻轻唤醒。</strong></p>
+      <p>喵呜，探险家，手机不是自己突然亮起来的。它像一座薄薄的“小猫灯塔城”：你一点屏幕，城门就开了，信号小猫跑去敲门，像素小猫们举起红、绿、蓝三种小灯，把文字、照片、动画和表情送到你的眼睛里。</p>
+    </section>
+
+    <h2>故事板构建</h2>
+    <div class="board">
+      <ol>
+        <li><strong>喵爪点亮城门：</strong>手指一点，手机知道探险家来了。</li>
+        <li><strong>电池送来小鱼干能量：</strong>电池把能量送进屏幕城。</li>
+        <li><strong>像素小房间排队发光：</strong>红、绿、蓝小猫用不同亮度拼出图像。</li>
+        <li><strong>亮度滑杆指挥合唱：</strong>亮一点就叫醒更多小猫，暗一点就让小猫们轻声发光。</li>
+      </ol>
+    </div>
+
+    <h2>画面一：喵爪唤醒屏幕城</h2>
+    <section class="scene">
+      <span class="tag">Storyboard 1</span>
+      <img src="assets/scene-1.webp" alt="Professor Meow and Explorer beside a glowing phone screen">
+      <p>当探险家点一下手机，屏幕城里的“敲门铃小猫”就收到了消息。它们不是在乱发光，而是在说：<strong>有人需要看见信息了，请发光小猫准备上岗。</strong></p>
+    </section>
+
+    <h2>画面二：电池把能量送进屏幕</h2>
+    <section class="scene">
+      <span class="tag">Storyboard 2</span>
+      <img src="assets/scene-2.webp" alt="Battery kitten sending energy to pixel kittens">
+      <p>手机里的电池，就像背着小鱼干背包的能量小猫。它把能量送给屏幕小猫，屏幕小猫才有力气举起小灯。于是我们就明白了：<strong>手机会发光，是因为能量被送到了屏幕里。</strong></p>
+    </section>
+
+    <h2>画面三：红绿蓝小灯拼出世界</h2>
+    <section class="scene">
+      <span class="tag">Storyboard 3</span>
+      <img src="assets/scene-3.webp" alt="Pixel rooms with red green and blue light kittens">
+      <p>每一个小小的像素房间里，都住着红灯小猫、绿灯小猫和蓝灯小猫。它们有的亮一点，有的暗一点，许多小房间排在一起，就拼出了图案。<strong>屏幕不是一整块光，而是许多小小光点一起合作。</strong></p>
+    </section>
+
+    <h2>画面四：亮度滑杆像指挥棒</h2>
+    <section class="scene">
+      <span class="tag">Storyboard 4</span>
+      <img src="assets/scene-4.webp" alt="Brightness slider controlling light kittens">
+      <p>当你把亮度调高，更多发光小猫会把灯举得更高，所以屏幕更亮，也会吃掉更多能量。把亮度调低，小猫们就轻轻发光，电池小猫也能休息久一点。<strong>亮度，就是指挥多少小猫、用多大力气发光的指挥棒。</strong></p>
+    </section>
+
+    <h2>总结思维图</h2>
+    <section class="scene mind">
+      <span class="tag">Mind Map</span>
+      <img src="assets/mind-map.webp" alt="Mind map of why a phone glows">
+      <p>所以，探险家今天铺上的这块知识砖块是：<strong>手机发光，是电池能量、屏幕像素、红绿蓝小灯和亮度控制一起合作的结果。</strong>你不是只看见一块亮玻璃，你看见的是一整座正在认真工作的光之小猫城。</p>
+    </section>
+
+    <div class="quote">这就是喵博士与探险家共同找到的答案：手机的光不是孤零零亮起的，它是千万只像素小猫把能量排成图案，温柔地把世界递到你眼前。</div>
+  </main>
+</body>
+</html>
