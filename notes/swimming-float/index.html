@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>喵博士语录：游泳为什么能浮在水上不沉下去</title>
+  <title>喵博士：味道为什么会自己跑出来？</title>
   <style>
     :root {
-      --ink: #26313d;
-      --blue: #6bbde8;
-      --coral: #f17f6b;
-      --leaf: #5abf8c;
-      --sun: #f3c84b;
-      --paper: #fffaf0;
-      --line: rgba(89, 139, 168, 0.24);
+      --ink: #252525;
+      --muted: #665f54;
+      --paper: #fff8e8;
+      --line: #eadcbf;
+      --blue: #3a8fd8;
+      --green: #5ba66b;
+      --red: #d65a4a;
+      --yellow: #f2c94c;
     }
 
     * {
@@ -21,134 +22,143 @@
 
     body {
       margin: 0;
+      background: #e7f1ed;
       color: var(--ink);
-      background:
-        linear-gradient(var(--line) 2px, transparent 2px) 0 0 / 100% 54px,
-        radial-gradient(circle at 18% 12%, rgba(243, 200, 75, 0.2), transparent 22%),
-        radial-gradient(circle at 88% 4%, rgba(107, 189, 232, 0.22), transparent 20%),
-        #f6f0e4;
       font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
     }
 
     .page {
       width: min(1080px, 100%);
       margin: 0 auto;
-      padding: 48px 42px 64px;
-      background: rgba(255, 250, 240, 0.95);
-      box-shadow: 0 0 0 1px rgba(38, 49, 61, 0.08), 0 24px 70px rgba(38, 49, 61, 0.13);
+      background:
+        linear-gradient(90deg, rgba(210, 182, 130, .22) 1px, transparent 1px) 0 0 / 54px 54px,
+        linear-gradient(rgba(210, 182, 130, .18) 1px, transparent 1px) 0 0 / 54px 54px,
+        var(--paper);
+      min-height: 100vh;
+      padding: 42px 38px 56px;
     }
 
     header {
-      padding: 28px 0 24px;
-      border-bottom: 8px solid rgba(107, 189, 232, 0.35);
+      border-bottom: 8px solid var(--yellow);
+      padding: 22px 0 30px;
     }
 
-    .eyebrow {
+    .tag {
       display: inline-block;
       padding: 10px 18px;
-      color: #1f5d78;
-      background: rgba(107, 189, 232, 0.18);
-      border: 3px solid rgba(31, 93, 120, 0.2);
-      border-radius: 8px;
+      border: 4px solid var(--ink);
+      background: #fff;
       font-size: 28px;
       font-weight: 800;
+      transform: rotate(-2deg);
     }
 
     h1 {
-      margin: 24px 0 12px;
-      font-size: clamp(52px, 7vw, 78px);
-      line-height: 1.08;
+      margin: 28px 0 16px;
+      font-size: 64px;
+      line-height: 1.12;
       letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 34px;
+      line-height: 1.55;
+    }
+
+    section {
+      padding: 34px 0;
+      border-bottom: 4px dashed var(--line);
     }
 
     h2 {
-      margin: 64px 0 22px;
-      padding-left: 22px;
-      border-left: 12px solid var(--coral);
-      font-size: 48px;
-      line-height: 1.18;
-      letter-spacing: 0;
-    }
-
-    p,
-    li {
-      font-size: 36px;
-      line-height: 1.72;
-      letter-spacing: 0;
+      margin: 0 0 22px;
+      font-size: 44px;
+      line-height: 1.22;
     }
 
     p {
-      margin: 22px 0;
+      margin: 0 0 24px;
+      font-size: 36px;
+      line-height: 1.72;
     }
 
     strong {
-      color: #0f5f83;
+      color: #111;
+      background: linear-gradient(transparent 58%, rgba(242, 201, 76, .55) 58%);
       font-weight: 900;
     }
 
-    .note {
-      margin: 34px 0;
+    .question {
+      border-left: 14px solid var(--blue);
+      background: rgba(255, 255, 255, .74);
       padding: 28px 30px;
-      background: #fff4bd;
-      border: 4px solid rgba(243, 200, 75, 0.55);
-      border-radius: 8px;
-      transform: rotate(-0.4deg);
+      font-size: 42px;
+      line-height: 1.5;
+      font-weight: 900;
     }
 
     .scene {
-      margin: 54px 0 64px;
-      padding-bottom: 34px;
-      border-bottom: 4px dashed rgba(38, 49, 61, 0.18);
+      margin-top: 22px;
     }
 
-    figure {
-      margin: 26px 0 22px;
-    }
-
-    img {
-      display: block;
+    .scene img {
       width: 100%;
-      height: auto;
-      border: 6px solid #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 14px 38px rgba(38, 49, 61, 0.18);
+      display: block;
+      border: 6px solid #262626;
       background: #fff;
     }
 
-    figcaption {
-      margin-top: 16px;
-      color: #546272;
-      font-size: 26px;
-      line-height: 1.45;
-      text-align: center;
+    .caption {
+      margin-top: 22px;
+      padding: 24px 28px;
+      background: rgba(255, 255, 255, .78);
+      border-left: 12px solid var(--green);
     }
 
-    .steps {
-      margin: 24px 0 0;
-      padding-left: 52px;
+    .note {
+      padding: 26px 28px;
+      background: rgba(214, 90, 74, .1);
+      border: 4px solid rgba(214, 90, 74, .6);
+      font-size: 34px;
+      line-height: 1.65;
     }
 
-    .quote {
-      margin-top: 44px;
-      padding: 34px;
-      color: #143b4c;
-      background: #dff3eb;
-      border: 5px solid rgba(90, 191, 140, 0.45);
-      border-radius: 8px;
+    .map img {
+      width: 100%;
+      display: block;
+      border: 6px solid #262626;
+      background: #fff;
+    }
+
+    .reply {
+      background: #fff;
+      border: 5px solid var(--ink);
+      padding: 28px;
+      font-size: 34px;
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      padding-top: 34px;
+    }
+
+    .gold {
+      font-size: 40px;
+      line-height: 1.55;
       font-weight: 900;
+      color: #1d4730;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 680px) {
       .page {
-        padding: 30px 22px 44px;
-      }
-
-      .eyebrow {
-        font-size: 22px;
+        padding: 28px 22px 44px;
       }
 
       h1 {
-        font-size: 44px;
+        font-size: 46px;
       }
 
       h2 {
@@ -156,12 +166,19 @@
       }
 
       p,
-      li {
+      .subtitle,
+      .caption,
+      .note,
+      .reply {
         font-size: 26px;
       }
 
-      figcaption {
-        font-size: 20px;
+      .question {
+        font-size: 31px;
+      }
+
+      .tag {
+        font-size: 22px;
       }
     }
   </style>
@@ -169,75 +186,70 @@
 <body>
   <main class="page">
     <header>
-      <div class="eyebrow">喵博士的小猫宇宙笔记</div>
-      <h1>游泳为什么能浮在水上不沉下去？</h1>
-      <p>喵呜，探险家，我们今天要一起趴在水边，把水面那层亮晶晶的秘密掀开一点点。</p>
+      <div class="tag">Professor Meow Notebook</div>
+      <h1>味道为什么会自己跑出来？</h1>
+      <p class="subtitle">从“爷爷带着酒，味道散出来，大家都醉了”这幅画出发，喵博士和探险家一起追踪一群会跑的小味道。</p>
     </header>
 
     <section>
-      <h2>一、核心翻译</h2>
-      <p>在我们的世界里，那其实是<strong>水里有一大群看不见的小水猫，在用软软的爪垫往上托住你</strong>。</p>
-      <p>当身体进入水里，会把一部分小水猫挤到旁边去。小水猫们不喜欢被挤得没地方站，于是它们会挤回来，形成一股<strong>往上的托举力</strong>。你的身体也有往下落的重量。只要小水猫往上托的力差不多追上了身体往下压的力，你就不会一直沉下去。</p>
-      <div class="note">
-        <p><strong>浮起来的关键不是水突然变硬了，</strong>而是身体占了水的位置，水里的小猫团队就会集体把你往上顶。</p>
-      </div>
+      <h2>给兔兔的问题</h2>
+      <div class="question">如果酒瓶没有脚，酒味为什么能从爷爷那里跑到大家的鼻子里？</div>
     </section>
 
     <section>
-      <h2>二、故事板：小水猫救援队</h2>
-      <ol class="steps">
-        <li>小水猫排成软垫，重重的小石猫会穿过软垫往下掉。</li>
-        <li>游泳猫一进水，挤开的水越多，回来托它的小水猫越多。</li>
-        <li>身体放松、吸进空气、四肢摊开，会让身体像蓬松的猫肚皮，更容易被托住。</li>
-        <li>划水不是主要把人“托飞”，而是帮助身体保持姿势、前进、把鼻子留在水面上。</li>
-      </ol>
+      <h2>第一步：核心翻译</h2>
+      <p>在我们的世界里，那其实是<strong>一群“味道小猫”从酒里醒来，开始在空气里到处散步</strong>。</p>
+      <p>酒不是只待在瓶子里的安静东西。只要有一点点开口，里面很轻很轻的味道小猫就会探出头。它们太小了，小到眼睛看不见；可是鼻子很厉害，能发现它们留下的爪印。</p>
+      <p>这些味道小猫有一个习惯：<strong>哪里挤，它们就往哪里不挤的地方跑</strong>。所以爷爷一靠近，酒味就不是站在原地等人闻，而是在空气里慢慢铺开。</p>
     </section>
 
     <section class="scene">
-      <h2>三、场景一：水面下的软垫</h2>
-      <p>小水猫们密密地排在一起，像一张会反弹的蓝色软垫。<strong>小石头很小却很重，挤开的水少，得到的托举也少，</strong>所以它容易往下沉。人的身体比小石头大很多，能挤开更多水，也就能召来更多小水猫帮忙托举。</p>
-      <figure>
-        <img src="assets/scene-1.jpg" alt="小水猫软垫托住蓬松身体，小石头下沉">
-        <figcaption>场景一：大小、重量和被挤开的水，决定小水猫能不能托住你。</figcaption>
-      </figure>
+      <h2>场景一：瓶子里的小味道醒了</h2>
+      <img src="assets/scene-1.jpg" alt="瓶子里的味道小猫准备出来">
+      <div class="caption">爷爷带来的酒瓶像一个小房间。盖子没有完全关住时，里面的味道小猫就闻到了外面的空气，开始探头探脑。<strong>味道能出来，是因为酒里有很小很轻的味道颗粒</strong>，它们会离开液体，跑进空气。</div>
     </section>
 
     <section class="scene">
-      <h2>四、场景二：你挤开水，水托回你</h2>
-      <p>当游泳猫钻进水里，它的身体把原本待在那里的小水猫推开。被推开的水越多，小水猫回来的队伍越壮。于是水对身体发出一个<strong>向上的回抱</strong>，这就是为什么人会觉得水里身体变轻了。</p>
-      <figure>
-        <img src="assets/scene-2.jpg" alt="游泳猫挤开水，小水猫向上托举">
-        <figcaption>场景二：往下压和往上托互相比赛，比赛接近平衡时，人就浮住了。</figcaption>
-      </figure>
+      <h2>场景二：味道小猫向四周散开</h2>
+      <img src="assets/scene-2.jpg" alt="味道在空气里扩散">
+      <div class="caption">刚跑出来时，瓶口附近的味道小猫最多，挤得尾巴都要打结。于是它们往空一点的地方跑，一只跑到桌边，一只跑到门口，一只跑到兔兔旁边。<strong>这就是“散开”：从多的地方跑向少的地方</strong>。</div>
     </section>
 
     <section class="scene">
-      <h2>五、场景三：放松和呼吸让身体变蓬松</h2>
-      <p>会游泳的人常说要放松，这在小猫宇宙里非常重要。紧张时身体蜷成硬硬的一团，像把猫毛都压扁了；放松、吸气、四肢展开时，胸口和肚子里的<strong>空气泡泡猫</strong>会把身体撑得更蓬松。身体同样重，却占了更大的空间，小水猫就更容易把你托起来。</p>
-      <figure>
-        <img src="assets/scene-3.jpg" alt="紧张蜷缩的猫下沉，放松摊开的猫漂浮">
-        <figcaption>场景三：吸气、摊开、放松，会让身体更像容易漂起来的蓬松猫垫。</figcaption>
-      </figure>
+      <h2>场景三：鼻子收到消息</h2>
+      <img src="assets/scene-3.jpg" alt="鼻子把味道消息送给大脑">
+      <div class="caption">当味道小猫碰到鼻子里的小门铃，门铃就会叮一下，把消息送给大脑。于是大脑说：“啊，我闻到了酒味！” <strong>我们闻到的不是整瓶酒，而是酒里跑出来的小味道到达了鼻子</strong>。</div>
     </section>
 
     <section class="scene">
-      <h2>六、场景四：划水让鼻子和方向保持正确</h2>
-      <p>人在水里并不是只靠划水才不沉。真正一直托着身体的，是小水猫的上托。划水和踢腿更像是在对小水猫说：请往这边流、请让我往前走、请让我把头保持在合适的位置。<strong>浮力负责托住，动作负责调整。</strong></p>
-      <figure>
-        <img src="assets/scene-4.jpg" alt="游泳猫划水踢腿保持鼻子在水面上">
-        <figcaption>场景四：动作越平稳，小水猫队伍越容易把身体托得稳稳的。</figcaption>
-      </figure>
+      <h2>场景四：大家为什么像醉了</h2>
+      <img src="assets/scene-4.jpg" alt="强烈气味让人有晕晕的感觉">
+      <div class="caption">如果味道小猫特别多，鼻子和大脑会收到很强的消息，人就可能觉得“哇，好冲”“有点晕”“像醉了一样”。不过喵博士要悄悄画一条分界线：<strong>闻到很强的酒味，和真的喝进去后醉了，不是同一件事</strong>。兔兔画的是那种很棒的感觉真相：酒味一来，空气都晃起来了。</div>
     </section>
 
     <section>
-      <h2>七、喵博士总结图</h2>
-      <p>所以，游泳能浮起来，是因为<strong>身体挤开水，水就往上托；身体越蓬松、越放松、越会调整姿势，就越容易让托举和重量保持平衡</strong>。</p>
-      <figure>
-        <img src="assets/mind-map.jpg" alt="游泳浮起来的小猫宇宙思维图">
-        <figcaption>总结图：浮、托、空气、摊开、划水，这五只小猫一起完成水上魔法。</figcaption>
-      </figure>
-      <p class="quote">这就是喵博士与探险家共同找到的答案：会浮起来的人，不是战胜了水，而是学会让小水猫们稳稳托住自己的轻盈。</p>
+      <h2>给兔兔的互动小任务</h2>
+      <p class="note">下次可以问他：<strong>“你画的蓝色和黑色，哪一种是酒味小猫？哪一种是大家晃起来的感觉？”</strong> 然后请他再加一笔：酒味最先从哪里跑出来？最后跑到了谁的鼻子里？</p>
+      <p>这样他不是被解释，而是在继续当发明者。你得到的下一张画，很可能会告诉你：他心里觉得“味道”到底是风、线、云、怪兽，还是一群会跑的小猫。</p>
     </section>
+
+    <section class="map">
+      <h2>最后的喵博士思维图</h2>
+      <img src="assets/mind-map.jpg" alt="味道为什么能跑的思维图">
+    </section>
+
+    <section>
+      <h2>可以直接发给他的开场白</h2>
+      <div class="reply">兔兔，你这张画让我发现一个超级厉害的问题：
+
+酒瓶没有脚，酒味为什么会自己跑出来，还能跑到大家鼻子里？
+
+喵博士说，可能是酒里住着一群很小很小的味道小猫。瓶子一打开，它们就从最挤的地方跑到不挤的地方。你画里的蓝色和黑色，会不会就是它们跑过空气时留下的路？</div>
+    </section>
+
+    <footer>
+      <p class="gold">这就是喵博士与探险家共同找到的答案：味道不是乖乖站着的东西，它会带着看不见的小爪印，从一个人的身边跑进另一个人的鼻子里。</p>
+    </footer>
   </main>
 </body>
 </html>
