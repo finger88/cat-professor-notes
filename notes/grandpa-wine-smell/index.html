@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="喵博士和兔兔一起追踪爷爷酒瓶里跑出来的味道小猫。">
+  <title>喵博士：爷爷的酒味为什么会跑遍整个房间？</title>
+  <style>
+    :root {
+      --ink: #262421;
+      --muted: #665f56;
+      --paper: #fffdf7;
+      --line: #d9cfbe;
+      --blue: #2f78b7;
+      --green: #39845e;
+      --coral: #d85b52;
+      --yellow: #f2c84b;
+      --violet: #7450a8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #dcece5;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    main {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(200, 185, 158, .17) 1px, transparent 1px) 0 0 / 52px 52px,
+        linear-gradient(rgba(200, 185, 158, .15) 1px, transparent 1px) 0 0 / 52px 52px,
+        var(--paper);
+      box-shadow: 0 0 70px rgba(48, 69, 58, .18);
+    }
+
+    header,
+    section,
+    footer {
+      padding: 48px 52px;
+    }
+
+    header {
+      min-height: 72vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 10px solid var(--yellow);
+      background: rgba(255, 255, 255, .58);
+    }
+
+    .label {
+      align-self: flex-start;
+      padding: 10px 18px;
+      border: 4px solid var(--ink);
+      background: #d8f0df;
+      font-size: 27px;
+      font-weight: 900;
+      transform: rotate(-1.5deg);
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 30px 0 22px;
+      font-size: 66px;
+      line-height: 1.14;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: 46px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 18px;
+      font-size: 36px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    p,
+    li {
+      font-size: 36px;
+      line-height: 1.72;
+    }
+
+    p {
+      margin: 0 0 25px;
+    }
+
+    strong {
+      font-weight: 900;
+      background: linear-gradient(transparent 60%, rgba(242, 200, 75, .55) 60%);
+    }
+
+    section {
+      border-bottom: 4px dashed var(--line);
+    }
+
+    .subtitle {
+      max-width: 880px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 35px;
+      line-height: 1.62;
+    }
+
+    .rabbit-voice {
+      border-left: 14px solid var(--coral);
+      padding: 30px 34px;
+      background: #fff0ec;
+      font-size: 40px;
+      line-height: 1.55;
+      font-weight: 850;
+    }
+
+    .hinge {
+      margin-top: 34px;
+      padding: 34px;
+      border: 5px solid var(--ink);
+      background: #e7f2ff;
+      box-shadow: 11px 11px 0 rgba(47, 120, 183, .2);
+      font-size: 44px;
+      line-height: 1.48;
+      font-weight: 900;
+    }
+
+    .core {
+      background: rgba(221, 243, 230, .52);
+    }
+
+    .bridge {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .bridge div {
+      min-height: 142px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      border: 3px solid rgba(38, 36, 33, .16);
+      background: #fff;
+      text-align: center;
+      font-size: 25px;
+      line-height: 1.4;
+      font-weight: 850;
+    }
+
+    .scene {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .scene h2,
+    .scene > p,
+    .scene .caption {
+      margin-left: 52px;
+      margin-right: 52px;
+    }
+
+    .scene img,
+    .map img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 30px 0;
+      background: #fff;
+      border-top: 6px solid var(--ink);
+      border-bottom: 6px solid var(--ink);
+    }
+
+    .caption {
+      padding: 30px 32px;
+      border-left: 13px solid var(--green);
+      background: rgba(255, 255, 255, .88);
+    }
+
+    .boundary {
+      border: 5px solid var(--coral);
+      padding: 30px 32px;
+      background: #fff5f1;
+    }
+
+    .prediction {
+      background: #f2eefb;
+    }
+
+    .prediction-list {
+      margin: 28px 0 0;
+      padding-left: 1.3em;
+    }
+
+    .prediction-list li {
+      margin-bottom: 20px;
+    }
+
+    .challenge {
+      padding: 34px;
+      border: 5px solid var(--violet);
+      background: #fff;
+      font-size: 40px;
+      line-height: 1.62;
+      font-weight: 850;
+    }
+
+    .map {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .map h2,
+    .map > p {
+      margin-left: 52px;
+      margin-right: 52px;
+    }
+
+    .reply {
+      white-space: pre-wrap;
+      padding: 34px;
+      border: 5px solid var(--ink);
+      background: #fff;
+      box-shadow: 11px 11px 0 rgba(242, 200, 75, .38);
+      font-size: 36px;
+      line-height: 1.72;
+    }
+
+    footer {
+      background: #dff1e7;
+    }
+
+    .gold {
+      margin: 0;
+      color: #183e2b;
+      font-size: 42px;
+      line-height: 1.58;
+      font-weight: 900;
+    }
+
+    @media (max-width: 700px) {
+      header,
+      section,
+      footer {
+        padding: 34px 24px;
+      }
+
+      header {
+        min-height: 68vh;
+      }
+
+      h1 {
+        font-size: 47px;
+      }
+
+      h2 {
+        font-size: 35px;
+      }
+
+      h3,
+      p,
+      li,
+      .subtitle,
+      .reply {
+        font-size: 27px;
+      }
+
+      .rabbit-voice,
+      .hinge,
+      .challenge,
+      .gold {
+        font-size: 31px;
+      }
+
+      .bridge {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bridge div {
+        min-height: 112px;
+        font-size: 21px;
+      }
+
+      .scene h2,
+      .scene > p,
+      .scene .caption,
+      .map h2,
+      .map > p {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="label">Professor Meow Notebook</div>
+      <h1>爷爷的酒味，为什么会跑遍整个房间？</h1>
+      <p class="subtitle">兔兔画出了一个很了不起的发现：有些东西明明看不见，却能从一个人身边出发，让整个房间都发生变化。</p>
+    </header>
+
+    <section>
+      <h2>先听兔兔怎么说</h2>
+      <div class="rabbit-voice">“爷爷会带着酒，然后味道散出来，大家都醉了。”</div>
+      <p>兔兔没有只画一只酒瓶。他画的是<strong>味道从爷爷那里出发，又碰到了所有人</strong>。这幅画已经抓住了一件很深的事：一个很小的源头，怎么会影响到一大片地方？</p>
+      <div class="hinge">可是，酒瓶没有脚，酒味为什么能跑过桌子、跑过空气，最后跑到大家的鼻子里？</div>
+    </section>
+
+    <section class="core">
+      <h2>在我们的世界里，那其实是……</h2>
+      <p><strong>许多没有队长的味道小猫，一直在酒里和空气里乱动。</strong></p>
+      <p>有些味道小猫在酒面附近跳得够高，就离开酒，钻进空气。它们不是闻到了谁的鼻子，也不是商量好要去哪儿。它们只是不停地碰来碰去。瓶口附近太挤，远处比较空，于是过一会儿，整个房间里都能找到它们。</p>
+      <p>这次我们要走过一座尺度之桥：</p>
+      <div class="bridge" aria-label="从整体场景到微小机制再回到整体">
+        <div>兔兔看见<br>全屋有酒味</div>
+        <div>放大之后<br>味道小猫乱动</div>
+        <div>许多小猫<br>碰撞并散开</div>
+        <div>回到房间<br>每个人都闻到</div>
+      </div>
+    </section>
+
+    <section class="scene">
+      <h2>场景一：它们不是想出去，而是一直在动</h2>
+      <p>酒里的小家伙没有排队，也没有出发命令。它们一直被周围推来撞去，其中一些从酒面跳进了瓶子上方的空气。</p>
+      <img src="assets/scene-1.webp" alt="味道小猫从打开的酒瓶液面随机逃逸">
+      <div class="caption"><strong>酒瓶打开，给了味道小猫一扇出口。</strong>温度越高，小家伙们通常动得越有力；酒面附近总有一些能跑进空气。这里最重要的不是“它们想去哪里”，而是“它们一直在动”。</div>
+    </section>
+
+    <section class="scene">
+      <h2>场景二：没有队长，也能慢慢散开</h2>
+      <p>刚离开瓶子时，味道小猫都挤在瓶口附近。它们不断和空气小猫碰撞，有的向左，有的向右，有的又折回来。</p>
+      <img src="assets/scene-2.webp" alt="味道小猫通过随机运动和气流在房间里扩散">
+      <div class="caption">单看一只小猫，它的路线乱七八糟；可是把许多只放在一起看，就出现了一个大规律：<strong>挤的地方会慢慢变松，空的地方会慢慢出现味道。</strong>风还会把一整群小猫带向同一个方向，所以窗户和风扇都能改变它们的路线。</div>
+    </section>
+
+    <section class="scene">
+      <h2>场景三：鼻子只收到一小份消息</h2>
+      <p>跑遍房间的味道小猫中，只有很少一部分碰巧来到兔兔鼻子旁边。鼻子里有许多形状不同的感应门。</p>
+      <img src="assets/scene-3.webp" alt="鼻子感应味道并给大脑发送信号">
+      <div class="caption">合适的味道小猫碰到合适的门，感应员就把消息送给大脑。大脑把这份消息认出来：“这是酒味。” <strong>我们闻到的是一份从鼻子送来的消息，不是整瓶酒跑进了身体。</strong></div>
+    </section>
+
+    <section class="scene">
+      <h2>场景四：闻到了，和醉了，是两条路</h2>
+      <p>兔兔把“酒味来了”和“大家醉了”画在一起，这个感觉特别有力量。不过喵博士还发现，两件事虽然挨得很近，走的路却不同。</p>
+      <img src="assets/scene-4.webp" alt="闻到酒味与喝酒后酒精进入血液的两条不同路径">
+      <div class="caption boundary"><strong>闻到酒味，主要是鼻子把气味消息交给大脑。</strong>真正喝下足够的酒，酒精才会从身体里进入血液，再影响大脑。平常闻见爷爷带来的酒味，并不等于自己也喝了酒、醉了。酒是大人的饮品，兔兔只负责追踪味道小猫。</div>
+    </section>
+
+    <section class="prediction">
+      <h2>现在，这群小猫可以帮我们猜未来</h2>
+      <ul class="prediction-list">
+        <li><strong>盖紧瓶盖：</strong>出口关上，能跑进房间的味道小猫会少很多。</li>
+        <li><strong>打开窗户：</strong>气流会改写路线。味道可能先经过某个人，再被带到屋外，最后慢慢变淡。</li>
+        <li><strong>打开风扇：</strong>风扇不会把味道变没，只会让它们换方向、走得更快。有些地方反而会更早闻到。</li>
+      </ul>
+      <div class="challenge">兔兔探险家的新任务：请画三个房间，分别放进“瓶盖、窗户和风扇”。哪一群味道小猫最容易迷路？哪一群会最快跑到你的鼻子？喵博士还不知道答案，要等你的路线图。</div>
+    </section>
+
+    <section class="map">
+      <h2>喵博士的因果路线图</h2>
+      <p>从打开酒瓶，到大脑认出味道，每一只小猫都在做一件有原因的事。</p>
+      <img src="assets/mind-map.webp" alt="酒味传播的因果路线与预测问题">
+    </section>
+
+    <section>
+      <h2>可以直接发给兔兔</h2>
+      <div class="reply">兔兔，我一直在看你画的那些黑线和蓝线，忽然发现了一个特别奇怪的问题：
+
+爷爷的酒瓶明明没有脚，酒味为什么能跑过桌子、跑过空气，最后跑到每个人鼻子里？
+
+喵博士发现，酒里可能住着许多没有队长的味道小猫。它们一直乱跑、碰撞，挤的地方慢慢变松，空的地方慢慢也有了它们。
+
+可是喵博士还不会画三种路线：盖上瓶盖、打开窗户、打开风扇以后，它们分别会怎么跑？你能画给我看吗？</div>
+    </section>
+
+    <footer>
+      <p class="gold">这就是喵博士与探险家共同找到的答案：许多没有队长的小动作聚在一起，也能让整个房间悄悄发生变化。</p>
+    </footer>
+  </main>
+</body>
+</html>

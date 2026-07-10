@@ -13,6 +13,7 @@
 - `notes/phone-glow/`：小猫解释万物：手机为什么会发光
 - `notes/swimming-float/`：小猫解释万物：游泳为什么能浮在水上不沉下去
 - `notes/smell-diffusion/`：小猫解释万物：味道为什么会自己跑出来
+- `notes/grandpa-wine-smell/`：小猫解释万物：爷爷的酒味为什么会跑遍整个房间
 
 ## 发布
 
