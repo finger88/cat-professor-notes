@@ -14,6 +14,7 @@
 - `notes/swimming-float/`：小猫解释万物：游泳为什么能浮在水上不沉下去
 - `notes/smell-diffusion/`：小猫解释万物：味道为什么会自己跑出来
 - `notes/grandpa-wine-smell/`：小猫解释万物：爷爷的酒味为什么会跑遍整个房间
+- `notes/tallest-okra-falls-after-typhoon/`：小猫解释万物：台风天之后，最高的秋葵为什么倒了
 
 ## 发布
 
