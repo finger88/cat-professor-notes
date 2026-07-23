@@ -15,6 +15,8 @@
 - `notes/smell-diffusion/`：小猫解释万物：味道为什么会自己跑出来
 - `notes/grandpa-wine-smell/`：小猫解释万物：爷爷的酒味为什么会跑遍整个房间
 - `notes/tallest-okra-falls-after-typhoon/`：小猫解释万物：台风天之后，最高的秋葵为什么倒了
+- `notes/gua-sha-stomach-pain/`：小猫解释万物：明明刮的是皮肤，肚子里的痛为什么跟着屁跑掉了
+- `notes/gua-sha-red-to-purple/`：小猫解释万物：刮痧后，皮肤为什么会从红变紫
 
 ## 发布
 

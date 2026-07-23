@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8e8">
+  <title>明明刮的是皮肤，肚子里的痛为什么跟着屁跑掉了？</title>
+  <style>
+    :root {
+      --ink: #24343b;
+      --deep: #165f63;
+      --coral: #e66c59;
+      --yellow: #f4cb57;
+      --mint: #b9dfd0;
+      --blue: #a9d8e8;
+      --green: #5d9274;
+      --paper: #fffaf0;
+      --cream: #fff2cf;
+      --line: #d8cbb3;
+      --soft-red: #f9e0d7;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: #dcebe4; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,.28) 1px, transparent 1px),
+        #dcebe4;
+      background-size: 100% 44px;
+    }
+
+    main {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 0 45px rgba(35, 62, 61, .14);
+    }
+
+    header,
+    section,
+    footer {
+      padding: 58px 56px;
+    }
+
+    header {
+      min-height: 780px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        linear-gradient(transparent 95%, rgba(49, 104, 105, .1) 95%),
+        var(--paper);
+      background-size: 100% 56px;
+      border-bottom: 8px solid var(--mint);
+    }
+
+    h1, h2, h3, p, li { letter-spacing: 0; }
+
+    h1 {
+      margin: 20px 0 28px;
+      color: var(--deep);
+      font-size: 72px;
+      line-height: 1.14;
+    }
+
+    h2 {
+      margin: 0 0 28px;
+      color: var(--deep);
+      font-size: 48px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 34px 0 14px;
+      color: #9b4d40;
+      font-size: 38px;
+      line-height: 1.35;
+    }
+
+    p, li {
+      font-size: 36px;
+      line-height: 1.76;
+    }
+
+    p { margin: 18px 0; }
+
+    strong { color: #a94b3e; }
+
+    a {
+      color: var(--deep);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 5px;
+    }
+
+    .eyebrow {
+      align-self: flex-start;
+      padding: 10px 18px;
+      border: 3px solid var(--ink);
+      background: var(--yellow);
+      font-size: 26px;
+      font-weight: 800;
+      transform: rotate(-1.5deg);
+    }
+
+    .subtitle {
+      max-width: 870px;
+      margin: 0;
+      color: #3d5a5d;
+      font-size: 39px;
+      line-height: 1.6;
+    }
+
+    .child-voice {
+      margin-top: 44px;
+      padding: 22px 28px;
+      border-left: 10px solid var(--coral);
+      background: var(--cream);
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1.65;
+    }
+
+    .band-mint { background: #edf7f1; }
+    .band-blue { background: #eef8fb; }
+    .band-yellow { background: #fff5d8; }
+    .band-coral { background: #fff0e9; }
+
+    .hinge {
+      margin: 32px 0 4px;
+      padding: 26px 30px;
+      border: 4px dashed var(--green);
+      background: white;
+      color: var(--deep);
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    figure {
+      margin: 34px 0 20px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 4px solid var(--ink);
+      background: white;
+    }
+
+    figcaption {
+      padding: 14px 8px 0;
+      color: #41575a;
+      font-size: 30px;
+      line-height: 1.65;
+    }
+
+    .timeline {
+      margin: 28px 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: event;
+    }
+
+    .timeline li {
+      position: relative;
+      margin: 0;
+      padding: 19px 16px 19px 86px;
+      border-bottom: 3px solid var(--line);
+    }
+
+    .timeline li::before {
+      counter-increment: event;
+      content: counter(event);
+      position: absolute;
+      left: 10px;
+      top: 24px;
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--ink);
+      border-radius: 50%;
+      background: var(--yellow);
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .equation {
+      margin: 30px 0;
+      padding: 24px 28px;
+      border-top: 4px solid var(--deep);
+      border-bottom: 4px solid var(--deep);
+      background: rgba(255,255,255,.72);
+      color: var(--deep);
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .truth {
+      padding: 26px 30px;
+      border-left: 10px solid var(--coral);
+      background: white;
+    }
+
+    .truth p { margin: 0; }
+
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .compare article {
+      min-width: 0;
+      padding: 24px;
+      border-top: 8px solid var(--blue);
+      background: rgba(255,255,255,.8);
+    }
+
+    .compare article:last-child { border-top-color: var(--coral); }
+
+    .compare h3 {
+      margin-top: 0;
+      font-size: 34px;
+    }
+
+    .compare p {
+      font-size: 31px;
+      line-height: 1.68;
+    }
+
+    .prediction {
+      margin: 28px 0;
+      padding: 24px 28px;
+      border: 3px solid var(--ink);
+      background: white;
+      box-shadow: 10px 10px 0 var(--mint);
+    }
+
+    .safety {
+      border-top: 8px solid var(--coral);
+      border-bottom: 8px solid var(--coral);
+      background: #fff8f3;
+    }
+
+    .safety ul {
+      margin: 20px 0 0;
+      padding-left: 1.4em;
+    }
+
+    .safety li { margin: 12px 0; }
+
+    .parent-note {
+      padding: 24px 28px;
+      border: 3px solid #9a744a;
+      background: #fff7dc;
+    }
+
+    .parent-note p {
+      font-size: 31px;
+      line-height: 1.68;
+    }
+
+    .quote {
+      margin: 34px 0 0;
+      padding: 32px;
+      border: 4px solid var(--ink);
+      background: var(--yellow);
+      color: var(--deep);
+      font-size: 43px;
+      font-weight: 800;
+      line-height: 1.55;
+      transform: rotate(.3deg);
+    }
+
+    .question {
+      margin-top: 36px;
+      font-size: 38px;
+      font-weight: 750;
+    }
+
+    footer {
+      border-top: 3px solid var(--line);
+      background: #f4eee2;
+    }
+
+    footer p,
+    footer li {
+      color: #4e5b5e;
+      font-size: 24px;
+      line-height: 1.65;
+    }
+
+    footer ul {
+      margin: 12px 0 0;
+      padding-left: 1.3em;
+    }
+
+    @media (max-width: 700px) {
+      header,
+      section,
+      footer { padding: 34px 22px; }
+
+      header { min-height: 86vh; }
+      h1 { font-size: 46px; }
+      h2 { font-size: 36px; }
+      h3 { font-size: 29px; }
+      p, li { font-size: 25px; line-height: 1.72; }
+      .subtitle { font-size: 28px; }
+      .eyebrow { font-size: 19px; }
+      .child-voice { font-size: 28px; }
+      .hinge { padding: 20px; font-size: 32px; }
+      figcaption { font-size: 22px; }
+      .timeline li { padding-left: 65px; }
+      .timeline li::before {
+        top: 22px;
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+      }
+      .equation { font-size: 28px; }
+      .compare { grid-template-columns: 1fr; }
+      .compare h3 { font-size: 28px; }
+      .compare p,
+      .parent-note p { font-size: 23px; }
+      .quote { padding: 24px; font-size: 31px; }
+      .question { font-size: 28px; }
+      footer p,
+      footer li { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">小猫解释万物 · 一次真实的身体侦探案</div>
+    <h1>明明刮的是皮肤，肚子里的痛为什么跟着屁跑掉了？</h1>
+    <p class="subtitle">热猫、人丹猫、午时茶猫、刮痧猫和屁屁猫都来了。究竟是谁帮了忙？喵博士决定不抢答，先跟探险家一起查线索。</p>
+    <div class="child-voice">“前天我中暑了，肚子很难受。妈妈给我吃了人丹和午时茶，又刮了痧。后来我放了一个屁，肚子就不痛了。妈妈救了我，我好感激她！”</div>
+  </header>
+
+  <section class="band-mint">
+    <h2>先接住探险家的发现</h2>
+    <p>你的身体真的经历了一串变化：<strong>先是热得难受，后来吃了药、休息、刮痧，再后来气体排出去，疼痛减轻了。</strong>这些都是重要线索。</p>
+    <p>你还发现了一个特别了不起的问题：刮痧发生在皮肤上，疼痛却在肚子里，它们之间究竟有没有一座看不见的桥？</p>
+    <div class="hinge">明明刮的是外面的皮肤，里面的肚子为什么会舒服起来？</div>
+  </section>
+
+  <section>
+    <h2>第一幕：热猫把身体忙乱了</h2>
+    <p><strong>在我们的世界里，那其实是……</strong>身体为了把多余的热送出去，打开了许多“汗水小门”。蓝色水猫和白色盐猫跟着汗跑出身体。如果天气太热、活动太久，身体补充得又不够快，肚子也可能出现恶心、不舒服或肌肉痉挛。</p>
+    <figure>
+      <img src="assets/scene-1.jpg" alt="炎热天气里，水猫和盐猫随汗离开，孩子感到腹部不适">
+      <figcaption>热猫围过来时，身体不是只有皮肤在热。水分、盐分、肌肉和肠胃都可能一起受到影响。</figcaption>
+    </figure>
+    <div class="truth">
+      <p><strong>第一条比较牢靠的线索：</strong>热相关不适本来就可能伴随恶心、腹部痉挛或疼痛。到阴凉处休息、降温并补充液体，是身体救援的重要部分。</p>
+    </div>
+  </section>
+
+  <section class="band-blue">
+    <h2>第二幕：妈妈带来了一整支救援队</h2>
+    <p>那天并不是只有“刮痧猫”出现。按照探险家的记录，事情依次发生了：</p>
+    <ol class="timeline">
+      <li>身体先在炎热之后感到肚子难受。</li>
+      <li>妈妈给了<strong>人丹和午时茶</strong>。</li>
+      <li>妈妈陪着休息，又进行了刮痧。</li>
+      <li>时间继续向前，身体也在降温和调整。</li>
+      <li>肠道中的气体排出去，肚子随后舒服了。</li>
+    </ol>
+    <figure>
+      <img src="assets/scene-2.jpg" alt="妈妈陪孩子休息，降温、喝水、药物、时间和轻柔触碰一起出现">
+      <figcaption>好多帮手几乎同时来到：凉快、休息、液体、药物、时间、姿势变化、妈妈的触碰和安心感。只看这一次经历，还不能把全部功劳交给其中一位。</figcaption>
+    </figure>
+    <div class="equation">先发生 A，再发生 B，不一定等于“只有 A 造成了 B”</div>
+    <p>人丹猫和午时茶猫当然也在现场。但口服药需要经过溶解、吸收和身体处理，不像按下电灯开关那样立刻完成任务。而且没有把同一天分成几个完全相同的实验，我们就无法知道两种药各自帮了多少、刮痧帮了多少，还是身体在休息和降温后本来就开始恢复。</p>
+  </section>
+
+  <section>
+    <h2>第三幕：皮肤外面和肚子里面</h2>
+    <p>刮痧工具碰到的是<strong>皮肤和皮下组织</strong>。肠道里的气体则待在腹腔里的肠管中间。皮肤下面并没有一条“刮痧通道”，能把屁直接刮到出口。</p>
+    <p>不过，躺下来、改变姿势、被温柔照顾、紧张感下降，以及时间经过，都可能让身体的整体状态发生变化。与此同时，肠道本来就在一下一下收缩，推动里面的食物和气体前进。</p>
+    <figure>
+      <img src="assets/scene-3.jpg" alt="皮肤和肠道分处不同层次，喵博士调查多种可能因素">
+      <figcaption>喵博士在中间放了一个大问号：外面的触碰和里面的变化可能同时发生，但我们不能画一支没有证据的“必然箭头”。</figcaption>
+    </figure>
+    <div class="compare">
+      <article>
+        <h3>我们确实看见了</h3>
+        <p>吃药、刮痧和休息之后，探险家排了气，肚子不痛了。这是可信的亲身观察。</p>
+      </article>
+      <article>
+        <h3>我们还不能确定</h3>
+        <p>不能只凭这一次先后顺序，确定是刮痧直接让气体排出，也不能精确分出两种药和其他因素的贡献。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band-yellow">
+    <h2>第四幕：屁屁猫真的带走了一部分痛</h2>
+    <p>肠道是一条会缓慢收缩的柔软通道。气体聚在某一段时，可能把肠壁撑开，让人感觉胀、顶或痛。肠道猫一下一下把气泡推向出口，当气体排出去，原来被撑开的地方不再那么紧，<strong>不舒服就可能很快减轻。</strong></p>
+    <figure>
+      <img src="assets/scene-4.jpg" alt="肠道猫把气泡推向出口，孩子舒服后拥抱妈妈">
+      <figcaption>这一段因果桥比较清楚：气体离开，肠道受到的撑胀减轻，肚子可能随之舒服。但气体为什么恰好在那时离开，仍有不止一种可能。</figcaption>
+    </figure>
+    <div class="prediction">
+      <h3>用模型做一个新预测</h3>
+      <p>如果肚子痛主要来自气体撑胀，那么换个姿势、走动后或自然排气后，也可能变舒服；如果疼痛来自别的原因，即使放了屁，也可能仍然痛。<strong>“放屁后缓解”是一条好线索，却不是所有腹痛的万能答案。</strong></p>
+    </div>
+  </section>
+
+  <section class="band-coral">
+    <h2>妈妈真正厉害的地方</h2>
+    <p>妈妈的功劳，不需要绑在某一块刮痧板上才成立。</p>
+    <p>真正重要的是：<strong>她看见了你的难受，马上停下别的事情来照顾你，陪着你，观察你的变化，直到你重新舒服起来。</strong>这份及时的发现、行动和陪伴，本身就是一支很强的救援队。</p>
+    <p>所以你的感谢一点也没有弄错。科学只是帮助我们把“妈妈救了我”和“究竟哪一步怎样起作用”分开来看：前一句是你亲身感受到的爱，后一句是值得继续调查的问题。</p>
+  </section>
+
+  <section>
+    <h2>把所有线索收进一张地图</h2>
+    <figure>
+      <img src="assets/mind-map.jpg" alt="热、降温休息、药物、触碰和排气共同出现的因果调查图">
+      <figcaption>好几位帮手来到，气体离开，疼痛减轻；一次观察还不能告诉我们每位帮手各自贡献了多少。</figcaption>
+    </figure>
+    <p class="quote">这就是喵博士与探险家共同找到的答案：妈妈召集了整支救援队，屁屁猫带走了撑胀，但只有诚实保留那个问号，我们才不会把“刚好接着发生”误认成“唯一的原因”。</p>
+    <p class="question">下一次探险，你想不想和喵博士一起画一张“身体不舒服时，我看见了哪些线索”的侦探表？</p>
+  </section>
+
+  <section class="safety">
+    <h2>给大人的安全便签</h2>
+    <ul>
+      <li>孩子出现热相关不适，应先停止活动，转移到阴凉通风处，帮助降温；意识清醒且能正常吞咽时，可少量多次补充液体。</li>
+      <li>如果出现意识不清、昏倒、抽搐、明显高热、呼吸急促、反复呕吐、严重或持续腹痛，或降温补水后仍未好转，应及时就医；热射病属于急症。</li>
+      <li>人丹和午时茶的具体配方、适用情况及儿童用量可能受产品和年龄影响。以后使用或合用前，应核对两份说明书，并向医生或药师确认；不要仅凭“上一次似乎有效”自行重复配药。</li>
+      <li>刮痧不能替代规范的降温、补液和必要的医疗评估。儿童皮肤娇嫩，若使用后出现明显皮肤破损、持续疼痛或其他异常，应停止并咨询专业人员。</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="parent-note">
+      <p><strong>这篇课件的证据边界：</strong>它解释的是一段真实经历中“可能发生了什么”和“哪些因果尚不能确定”，不是对孩子当时病情的远程诊断，也不是人丹、午时茶或刮痧的治疗建议。</p>
+    </div>
+    <p>参考资料：</p>
+    <ul>
+      <li><a href="https://www.nhc.gov.cn/xcs/c100122/201707/c3d57c6a2a1d40f3a71a16e3cc7c5e23.shtml">国家卫生健康委员会：预防中暑核心信息</a></li>
+      <li><a href="https://www.healthychildren.org/English/tips-tools/Symptom-Checker/IFrame/Pages/symptomviewer.aspx?symptom=Heat+Exposure+and+Reactions">美国儿科学会：儿童热暴露与热相关反应</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/20205902/">PubMed：刮痧用于疼痛的对照研究系统综述</a></li>
+    </ul>
+  </footer>
+</main>
+</body>
+</html>
