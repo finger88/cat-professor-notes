@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="喵博士用小猫宇宙解释：为什么有时要拔乳牙，以及什么时候应该让它自然掉落。">
+  <title>喵博士：为什么要拔乳牙？</title>
+  <style>
+    :root {
+      --ink: #242424;
+      --muted: #625d55;
+      --paper: #fffaf0;
+      --paper-deep: #f6ead1;
+      --coral: #dd654e;
+      --teal: #218f86;
+      --yellow: #f2c84b;
+      --blue: #397fbd;
+      --green: #569b61;
+      --danger: #b9443d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #dcebe7;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .page {
+      width: min(1080px, 100%);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 42px 38px 58px;
+      background-color: var(--paper);
+      background-image:
+        linear-gradient(rgba(214, 187, 137, .18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(214, 187, 137, .15) 1px, transparent 1px);
+      background-size: 54px 54px;
+      box-shadow: 0 0 36px rgba(35, 60, 54, .14);
+    }
+
+    header {
+      padding: 20px 0 34px;
+      border-bottom: 8px solid var(--yellow);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 4px solid var(--ink);
+      background: #fff;
+      font-size: 28px;
+      font-weight: 850;
+      transform: rotate(-1.5deg);
+    }
+
+    h1 {
+      margin: 30px 0 16px;
+      font-size: 68px;
+      line-height: 1.14;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 940px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 34px;
+      line-height: 1.58;
+    }
+
+    section {
+      padding: 38px 0;
+      border-bottom: 4px dashed #dfcfb1;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: 44px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    p,
+    li {
+      font-size: 36px;
+      line-height: 1.72;
+    }
+
+    p {
+      margin: 0 0 24px;
+    }
+
+    strong {
+      font-weight: 900;
+      background: linear-gradient(transparent 59%, rgba(242, 200, 75, .6) 59%);
+    }
+
+    .question {
+      padding: 28px 30px;
+      border-left: 14px solid var(--blue);
+      background: rgba(255, 255, 255, .78);
+      font-size: 42px;
+      line-height: 1.52;
+      font-weight: 900;
+    }
+
+    .answer-strip {
+      margin-top: 28px;
+      padding: 26px 28px;
+      border: 4px solid var(--teal);
+      background: #effaf6;
+      font-size: 36px;
+      line-height: 1.64;
+    }
+
+    .scene img,
+    .map img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 6px solid var(--ink);
+      background: #fff;
+    }
+
+    .caption {
+      margin-top: 22px;
+      padding: 24px 28px;
+      border-left: 12px solid var(--green);
+      background: rgba(255, 255, 255, .82);
+      font-size: 36px;
+      line-height: 1.7;
+    }
+
+    .signal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .signal {
+      min-height: 220px;
+      padding: 24px;
+      border: 4px solid var(--ink);
+      background: #fff;
+    }
+
+    .signal:nth-child(1) {
+      border-top: 12px solid var(--coral);
+    }
+
+    .signal:nth-child(2) {
+      border-top: 12px solid var(--blue);
+    }
+
+    .signal:nth-child(3) {
+      border-top: 12px solid var(--yellow);
+    }
+
+    .signal:nth-child(4) {
+      border-top: 12px solid var(--teal);
+    }
+
+    .signal h3 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    .signal p {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.58;
+    }
+
+    .safety {
+      padding: 28px 30px;
+      border: 5px solid var(--danger);
+      background: #fff3f0;
+    }
+
+    .safety p:last-child {
+      margin-bottom: 0;
+    }
+
+    .prediction {
+      padding: 28px 30px;
+      border: 5px solid var(--blue);
+      background: #f1f8ff;
+    }
+
+    .prediction p:last-child {
+      margin-bottom: 0;
+    }
+
+    .sources {
+      color: var(--muted);
+    }
+
+    .sources p,
+    .sources li {
+      font-size: 27px;
+      line-height: 1.6;
+    }
+
+    .sources ul {
+      margin: 0;
+      padding-left: 1.25em;
+    }
+
+    .sources a {
+      color: #165f87;
+      text-underline-offset: 5px;
+    }
+
+    footer {
+      padding-top: 38px;
+    }
+
+    .gold {
+      margin: 0;
+      color: #164e38;
+      font-size: 40px;
+      line-height: 1.58;
+      font-weight: 900;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        padding: 28px 22px 44px;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      p,
+      li,
+      .subtitle,
+      .caption,
+      .answer-strip {
+        font-size: 26px;
+      }
+
+      .question {
+        font-size: 31px;
+      }
+
+      .tag {
+        font-size: 21px;
+      }
+
+      .signal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .signal {
+        min-height: 0;
+      }
+
+      .signal h3 {
+        font-size: 28px;
+      }
+
+      .signal p,
+      .sources p,
+      .sources li {
+        font-size: 23px;
+      }
+
+      .gold {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="tag">Professor Meow Notebook</div>
+      <h1>为什么要拔乳牙？</h1>
+      <p class="subtitle">乳牙明明还站在嘴巴里，为什么有时要请它离开？喵博士和探险家一起去看牙龈下面那场安静的“换班”。</p>
+    </header>
+
+    <section>
+      <h2>我们追踪的惊奇问题</h2>
+      <div class="question">乳牙本来就会自己掉，为什么有时还需要牙医把它拔掉？</div>
+      <div class="answer-strip"><strong>先揭晓最重要的一点：并不是每颗乳牙都要拔。</strong>多数乳牙会等牙根变短、牙齿很松以后自然掉落；只有换班卡住、牙齿生病或受伤时，牙医才可能帮忙。</div>
+    </section>
+
+    <section>
+      <h2>第一步：核心翻译</h2>
+      <p>在我们的世界里，那其实是<strong>乳牙小猫和恒牙小猫在轮流值班</strong>。</p>
+      <p>乳牙小猫不是“没用的小牙”。恒牙还没长好时，它先负责咬食物、帮忙说话，还像一位认真站岗的占位员，替后来的恒牙守住位置。</p>
+      <p>所以，<strong>拔乳牙不是换牙的必修课</strong>。时间没到就赶它走，旁边的牙齿可能慢慢挤过来，让恒牙小猫的入口变窄。</p>
+    </section>
+
+    <section class="scene">
+      <h2>场景一：乳牙先替恒牙守位置</h2>
+      <img src="assets/scene-1.jpg" alt="乳牙在牙龈上方工作并为下方恒牙保留位置">
+      <div class="caption">乳牙小猫站在牙龈上面工作，恒牙小猫在下面慢慢长大。<strong>乳牙既在使用位置，也在保留位置</strong>。如果恒牙还没准备好，乳牙没有疼痛或严重损坏，就不该只因为它叫“乳牙”而匆忙拔掉。</div>
+    </section>
+
+    <section class="scene">
+      <h2>场景二：正常换班，牙根会慢慢缩短</h2>
+      <img src="assets/scene-2.jpg" alt="恒牙向上萌出，乳牙牙根逐渐吸收，牙冠开始松动">
+      <div class="caption">恒牙小猫向上靠近时，身体里的清理小猫会让乳牙的牙根一点点被吸收。牙根越来越短，乳牙只剩少量软组织牵着，于是开始摇晃，最后自然掉落。<strong>牙齿变松不是恒牙把整颗乳牙硬顶出去，而是乳牙的“地基”正在变少。</strong></div>
+    </section>
+
+    <section>
+      <h2>什么时候牙医可能会帮忙？</h2>
+      <div class="signal-grid">
+        <article class="signal">
+          <h3>恒牙已经出现，乳牙却还很牢</h3>
+          <p>新牙从旁边或后面冒头，旧牙仍挡着通道，牙医会判断是否需要让路。</p>
+        </article>
+        <article class="signal">
+          <h3>乳牙蛀得很深或发生感染</h3>
+          <p>如果牙齿已经很难修复，继续留下可能带来疼痛或感染风险。</p>
+        </article>
+        <article class="signal">
+          <h3>乳牙受伤、移位或松得不安全</h3>
+          <p>摔伤后的牙齿可能碰到恒牙的生长区域，也可能影响吃饭，需要检查。</p>
+        </article>
+        <article class="signal">
+          <h3>正畸或生长路线需要调整</h3>
+          <p>牙医会结合口内检查和影像，看恒牙的位置、空间与萌出时机再决定。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene">
+      <h2>场景三：两排牙出现，先查清路线</h2>
+      <img src="assets/scene-3.jpg" alt="乳牙未松而恒牙从后方萌出，牙医进行检查">
+      <div class="caption">有时恒牙小猫已经从后排探头，乳牙小猫却还牢牢站岗，看起来像长了“两排牙”。这不等于必须立刻拔。<strong>牙医要先看乳牙松不松、恒牙从哪里来、嘴里有没有足够空间</strong>，再决定等待还是帮忙。</div>
+    </section>
+
+    <section class="scene">
+      <h2>场景四：拔牙是处理问题，不是追赶进度</h2>
+      <img src="assets/scene-4.jpg" alt="蛀牙、受伤、过度松动和咨询牙医的四个安全场景">
+      <div class="caption">深蛀、感染、受伤移位，或松到影响吃饭，都是需要大人和牙医判断的信号。<strong>不要用门把手和绳子拉牙，也不要硬拽一颗还很牢的乳牙</strong>。喵博士更喜欢先查清楚，再决定要不要行动。</div>
+    </section>
+
+    <section>
+      <h2>边界情况：什么时候反而不拔？</h2>
+      <p>如果乳牙下面没有对应的恒牙，健康的乳牙有时会继续留下来工作很久。即使乳牙已经松动，也常常只需要给它时间，让它自然完成换班。</p>
+      <div class="safety">
+        <p><strong>这些情况请尽快找牙医：</strong>牙痛持续、牙龈明显肿起或流脓、脸部肿胀、牙齿摔伤后移位，或者恒牙已经长出而乳牙长时间没有变松。</p>
+        <p>乳牙意外撞掉后不要自己塞回牙槽；让牙医检查下面正在发育的恒牙是否受到影响。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>探险家的预测尺</h2>
+      <div class="prediction">
+        <p><strong>如果乳牙牙根吸收得越多</strong>，它通常会越来越松，轻轻晃动的幅度也会变大。</p>
+        <p><strong>如果乳牙仍很牢、很痛或周围肿起来</strong>，就先停手，请牙医看看：这可能不是一次顺利的自然换班。</p>
+      </div>
+      <p style="margin-top: 26px;">下一次照镜子时，探险家可以画下旧牙和新牙的位置：<strong>新牙是在正下方排队，还是从旁边探出了脑袋？</strong>这张路线图，会变成下一次和喵博士继续追踪的线索。</p>
+    </section>
+
+    <section class="map">
+      <h2>最后的喵博士思维图</h2>
+      <img src="assets/mind-map.jpg" alt="乳牙作用、自然脱落、牙医帮助和安全规则的总结思维图">
+    </section>
+
+    <section class="sources">
+      <h2>给大探险家的科学依据</h2>
+      <ul>
+        <li><a href="https://www.healthychildren.org/English/healthy-living/oral-health/Pages/When-Children-Begin-to-Lose-their-Baby-Teeth.aspx">美国儿科学会 HealthyChildren：儿童何时开始掉乳牙</a></li>
+        <li><a href="https://www.nhs.uk/best-start-in-life/how-to-take-care-of-your-baby-or-toddlers-teeth/">英国 NHS：乳牙帮助进食、说话并为恒牙保留空间</a></li>
+        <li><a href="https://www.healthychildren.org/English/tips-tools/Symptom-Checker/IFrame/Pages/symptomviewer.aspx?symptom=Tooth+Injury">美国儿科学会 HealthyChildren：儿童牙外伤的就医提示</a></li>
+        <li><a href="https://www.uclh.nhs.uk/our-services/find-service/dental-services/hypodontia-clinic">伦敦大学学院医院：恒牙缺失与保留乳牙</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p class="gold">这就是喵博士与探险家共同找到的答案：拔乳牙不是把旧牙赶走，而是在自然换班卡住或牙齿生病时，帮恒牙找到一条更安全的路。</p>
+    </footer>
+  </main>
+</body>
+</html>
