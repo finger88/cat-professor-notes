@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="喵博士用小猫宇宙解释浴室里黏黏滑滑的绿色东西：生物膜怎样形成、为什么变绿、有什么风险以及如何安全清理。">
+  <title>喵博士：浴室里黏黏滑滑的绿膜是什么？</title>
+  <style>
+    :root {
+      --ink: #252725;
+      --muted: #625f58;
+      --paper: #fffdf5;
+      --coral: #d9644d;
+      --teal: #16877e;
+      --blue: #347db4;
+      --yellow: #f2c94f;
+      --green: #4f9459;
+      --red: #b9463e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #dcece8;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .page {
+      width: min(1080px, 100%);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 42px 38px 60px;
+      background-color: var(--paper);
+      background-image:
+        linear-gradient(rgba(220, 194, 145, .18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(220, 194, 145, .13) 1px, transparent 1px);
+      background-size: 54px 54px;
+      box-shadow: 0 0 36px rgba(39, 67, 59, .15);
+    }
+
+    header {
+      padding: 20px 0 34px;
+      border-bottom: 8px solid var(--yellow);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 4px solid var(--ink);
+      background: #fff;
+      font-size: 28px;
+      font-weight: 850;
+      transform: rotate(-1.4deg);
+    }
+
+    h1 {
+      margin: 30px 0 16px;
+      font-size: 66px;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 950px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 34px;
+      line-height: 1.58;
+    }
+
+    section {
+      padding: 38px 0;
+      border-bottom: 4px dashed #decdb0;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: 44px;
+      line-height: 1.28;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    p,
+    li {
+      font-size: 36px;
+      line-height: 1.72;
+    }
+
+    p {
+      margin: 0 0 24px;
+    }
+
+    strong {
+      font-weight: 900;
+      background: linear-gradient(transparent 59%, rgba(242, 201, 79, .62) 59%);
+    }
+
+    .question {
+      padding: 28px 30px;
+      border-left: 14px solid var(--blue);
+      background: rgba(255, 255, 255, .84);
+      font-size: 42px;
+      line-height: 1.52;
+      font-weight: 900;
+    }
+
+    .answer-strip {
+      margin-top: 28px;
+      padding: 26px 28px;
+      border: 4px solid var(--teal);
+      background: #effaf6;
+      font-size: 36px;
+      line-height: 1.64;
+    }
+
+    .name-tag {
+      display: inline-block;
+      margin: 8px 0 26px;
+      padding: 18px 26px;
+      border: 5px solid var(--green);
+      background: #fff;
+      color: #266b39;
+      font-size: 46px;
+      line-height: 1.3;
+      font-weight: 900;
+      transform: rotate(-1deg);
+    }
+
+    .scene img,
+    .map img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 6px solid var(--ink);
+      background: #fff;
+    }
+
+    .caption {
+      margin-top: 22px;
+      padding: 24px 28px;
+      border-left: 12px solid var(--green);
+      background: rgba(255, 255, 255, .86);
+      font-size: 36px;
+      line-height: 1.7;
+    }
+
+    .layer-note {
+      margin: 28px 0 0;
+      padding: 26px 28px;
+      border: 5px solid var(--coral);
+      background: #fff6ef;
+      font-size: 32px;
+      line-height: 1.62;
+    }
+
+    .clue-grid,
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .risk-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .clue,
+    .risk {
+      min-height: 230px;
+      padding: 24px;
+      border: 4px solid var(--ink);
+      background: #fff;
+    }
+
+    .clue:nth-child(1),
+    .risk:nth-child(1) {
+      border-top: 12px solid var(--green);
+    }
+
+    .clue:nth-child(2),
+    .risk:nth-child(2) {
+      border-top: 12px solid var(--blue);
+    }
+
+    .clue:nth-child(3) {
+      border-top: 12px solid var(--coral);
+    }
+
+    .clue p,
+    .risk p {
+      margin: 0;
+      font-size: 29px;
+      line-height: 1.58;
+    }
+
+    .boundary,
+    .safety,
+    .prediction {
+      padding: 28px 30px;
+      border: 5px solid var(--blue);
+      background: #f1f8ff;
+    }
+
+    .safety {
+      border-color: var(--red);
+      background: #fff2ef;
+    }
+
+    .prediction {
+      border-color: var(--teal);
+      background: #effaf6;
+    }
+
+    .boundary p:last-child,
+    .safety p:last-child,
+    .prediction p:last-child {
+      margin-bottom: 0;
+    }
+
+    .sources {
+      color: var(--muted);
+    }
+
+    .sources p,
+    .sources li {
+      font-size: 27px;
+      line-height: 1.6;
+    }
+
+    .sources ul {
+      margin: 0;
+      padding-left: 1.25em;
+    }
+
+    .sources a {
+      color: #165f87;
+      text-underline-offset: 5px;
+    }
+
+    footer {
+      padding-top: 38px;
+    }
+
+    .gold {
+      margin: 0;
+      color: #164e38;
+      font-size: 40px;
+      line-height: 1.58;
+      font-weight: 900;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        padding: 28px 22px 44px;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      p,
+      li,
+      .subtitle,
+      .caption,
+      .answer-strip {
+        font-size: 26px;
+      }
+
+      .question {
+        font-size: 31px;
+      }
+
+      .tag {
+        font-size: 21px;
+      }
+
+      .name-tag {
+        font-size: 34px;
+      }
+
+      .layer-note {
+        font-size: 24px;
+      }
+
+      .clue-grid,
+      .risk-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .clue,
+      .risk {
+        min-height: 0;
+      }
+
+      .clue h3,
+      .risk h3 {
+        font-size: 28px;
+      }
+
+      .clue p,
+      .risk p,
+      .sources p,
+      .sources li {
+        font-size: 23px;
+      }
+
+      .gold {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="tag">Professor Meow Notebook</div>
+      <h1>浴室里黏黏滑滑的绿膜是什么？</h1>
+      <p class="subtitle">没有人往地上倒胶水，积水旁边为什么会自己长出一层滑滑的东西？它又为什么有时披上绿色外套？</p>
+    </header>
+
+    <section>
+      <h2>先叫出它的名字</h2>
+      <div class="name-tag">它通常叫：生物膜</div>
+      <div class="question">明明只是一点水，为什么过些时候会变成黏滑的“小社区”？</div>
+      <div class="answer-strip"><strong>“生物膜”是最准确的大名字。</strong>其中如果有许多能利用光的藻类，绿色部分也常被叫作<strong>藻膜或绿藻膜</strong>。只看颜色不能百分之百确认成员是谁，但“潮湿、黏滑、容易抹开、清理后会回来”是生物膜的重要线索。</div>
+    </section>
+
+    <section>
+      <h2>第一步：核心翻译</h2>
+      <p>在我们的世界里，那其实是<strong>许多微生物小猫，用自己分泌的黏胶搭起的一座潮湿公寓</strong>。</p>
+      <p>细菌小猫、真菌小猫和藻类小猫原本各自在水、空气和表面附近活动。它们没有总指挥，也不是为了弄脏浴室才集合。只是在一块长期有水、温度合适、还能捡到肥皂屑和皮脂小点心的表面上，<strong>留下来和繁殖的机会更大</strong>。</p>
+    </section>
+
+    <section class="scene">
+      <h2>场景一：先摸清它和水垢的差别</h2>
+      <img src="assets/scene-1.jpg" alt="浴室湿滑绿膜与白色硬水垢的质地对比">
+      <div class="caption">生物膜通常<strong>柔软、湿滑、能被擦开</strong>；水垢通常<strong>坚硬、粗糙、像粉笔壳</strong>。一个来自微生物和黏性基质，一个来自水中矿物结晶。它们也可能同时出现，让浴室表面变成“硬壳上铺滑毯”。</div>
+    </section>
+
+    <section class="scene">
+      <h2>场景二：一层滑膜是怎样长出来的？</h2>
+      <img src="assets/scene-2.jpg" alt="微生物附着浴室瓷砖并分泌黏性基质形成生物膜">
+      <div class="caption">先有少量微生物小猫碰巧黏在湿瓷砖上。它们分泌多糖、蛋白质等组成的胶状物，把自己固定住；后来繁殖出的成员也留在里面。黏胶还会兜住肥皂屑、皮脂和灰尘。<strong>许多独立发生的小动作叠在一起，就形成了摸起来滑滑的生物膜。</strong></div>
+      <div class="layer-note"><strong>科学名字：</strong>包住微生物的胶状物叫“胞外聚合物基质”，英文常缩写为 EPS。它既像锚，又像被子，还能让清洁剂不容易一下子碰到里面的所有成员。</div>
+    </section>
+
+    <section class="scene">
+      <h2>场景三：为什么有时会变绿？</h2>
+      <img src="assets/scene-3.jpg" alt="光照处的藻类使生物膜变绿，阴暗处仍可能有透明生物膜，并对比铜绿污渍">
+      <div class="caption">有光照时，含叶绿素的藻类小猫能利用光和二氧化碳制造食物，于是数量增加，把生物膜染绿。<strong>但生物膜不一定绿色</strong>：阴暗处也可能长出透明、乳白、粉红或深色的膜，因为里面的成员不同。</div>
+    </section>
+
+    <section>
+      <h2>三条线索，不把所有绿色都叫藻</h2>
+      <div class="clue-grid" aria-label="浴室绿色痕迹的辨别线索">
+        <article class="clue">
+          <h3>软、滑、会抹开</h3>
+          <p>更像生物膜；见光处变绿时，藻类参与的可能性更高。</p>
+        </article>
+        <article class="clue">
+          <h3>白灰、硬、粗糙</h3>
+          <p>更像水垢，是钙镁等矿物留下的结晶硬壳。</p>
+        </article>
+        <article class="clue">
+          <h3>蓝绿、硬、不滑</h3>
+          <p>若集中在铜龙头或铜管下方，可能是腐蚀产生的铜盐污渍。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>它有什么危害？</h2>
+      <div class="risk-grid" aria-label="浴室生物膜的主要风险">
+        <article class="risk">
+          <h3>先防滑倒</h3>
+          <p><strong>滑是最直接的危险。</strong>脚踩上去，鞋底和地面之间的摩擦会变小，孩子、老人尤其容易摔倒。</p>
+        </article>
+        <article class="risk">
+          <h3>再管卫生</h3>
+          <p>多数健康人碰到普通浴室生物膜不一定会生病，但其中可能藏有机会致病的微生物。不要让它接触伤口、眼睛或隐形眼镜。</p>
+        </article>
+      </div>
+      <div class="boundary" style="margin-top: 28px;">
+        <p><strong>颜色不能告诉我们“有没有病菌”。</strong>看起来很绿的不一定最危险，看起来透明的也不等于没有微生物。家里有免疫力较弱的人，或污膜反复出现在储水、喷头和难清洁的管路中时，要更认真处理。</p>
+      </div>
+    </section>
+
+    <section class="scene">
+      <h2>场景四：拆掉公寓，也拆掉它的生长条件</h2>
+      <img src="assets/scene-4.jpg" alt="成人刷洗、冲净、刮水、通风并修理漏水以清除和预防浴室生物膜">
+      <div class="caption"><strong>第一步是刷，不是只倒消毒液。</strong>刷子和清洁剂先把黏性基质打散，清水带走碎屑，再把表面刮干、通风并修好漏水。只清掉眼前绿色，却一直让积水回来，微生物小猫很快又能找到住处。</div>
+    </section>
+
+    <section>
+      <h2>安全清理守则</h2>
+      <div class="safety">
+        <p><strong>让大人处理湿滑地面。</strong>先在入口放好防滑提醒，戴手套，用适合瓷砖或地面的清洁剂和刷子清除黏膜，再充分冲洗、刮水和晾干。是否需要消毒、使用哪种产品，以产品标签和表面材质说明为准。</p>
+        <p><strong>漂白剂绝不能与醋、柠檬酸、洁厕剂或含氨清洁剂混合。</strong>一次只用一种清洁产品，并保持通风。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>改变条件，我们就能预测</h2>
+      <div class="prediction">
+        <p><strong>积水时间更长、温暖、有光、残留物更多</strong>，生物膜通常长得更快；每天刮水、保持通风、修好漏水，它就会慢下来。</p>
+        <p>如果把光挡住，绿色藻类可能减少，但细菌和真菌组成的透明生物膜仍可能存在。所以“没有绿色”不等于“没有滑膜”，<strong>干燥才是更有力的断路开关</strong>。</p>
+      </div>
+    </section>
+
+    <section class="map">
+      <h2>一张图收好整条因果链</h2>
+      <img src="assets/mind-map.jpg" alt="浴室生物膜形成、变绿、风险、辨别和清理方法的总结思维图">
+      <div class="caption"><strong>水分留下 → 微生物附着 → 分泌黏性基质 → 兜住残留物并繁殖 → 表面变滑，有藻时可能变绿。</strong>刷掉黏膜，再减少水分，才是完整地打断循环。</div>
+    </section>
+
+    <section>
+      <h2>探险家的观察任务</h2>
+      <p>请大人清洁浴室后，连续几天观察两件事：哪一处总是最后才干？哪一处最先恢复滑感？不要用手直接摸，可以在干燥时让大人用纸巾检查。<strong>如果“最晚干”和“最先滑”总在同一处</strong>，我们就抓到了水分这只关键小猫的脚印。</p>
+    </section>
+
+    <section class="sources">
+      <h2>喵博士的科学书架</h2>
+      <ul>
+        <li><a href="https://www.cdc.gov/infection-control/hcp/environmental-control/appendix-c-water.html">美国疾病控制与预防中心：Appendix C. Water</a>，介绍生物膜的微生物与胞外基质，以及水槽、喷头等处的生物膜。</li>
+        <li><a href="https://www.cdc.gov/drinking-water/prevention/preventing-waterborne-germs-at-home.html">美国疾病控制与预防中心：Preventing Waterborne Germs at Home</a>，解释生物膜的黏性和家庭水系统中的相关风险。</li>
+        <li><a href="https://www.portland.gov/water/drinking-water-quality/troubleshooting-drinking-water-quality-home/discolored-water">Portland Water Bureau：Troubleshooting Discolored Water</a>，说明铜管腐蚀也可能造成蓝绿色污渍。</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p class="gold">这就是喵博士与探险家共同找到的答案：浴室里黏黏滑滑的绿色东西通常叫生物膜，绿色常来自见光生长的藻类；许多微生物小猫没有总指挥，却能靠水分和黏胶一起铺成一张滑毯。</p>
+    </footer>
+  </main>
+</body>
+</html>

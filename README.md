@@ -10,6 +10,8 @@
 
 当前示例：
 
+- `notes/bathroom-biofilm/`：小猫解释万物：浴室里黏黏滑滑的绿膜是什么
+- `notes/limescale-formation-hazards/`：小猫解释万物：水垢是怎么产生的，有什么危害
 - `notes/why-extract-baby-teeth/`：小猫解释万物：为什么要拔乳牙
 - `notes/phone-glow/`：小猫解释万物：手机为什么会发光
 - `notes/swimming-float/`：小猫解释万物：游泳为什么能浮在水上不沉下去

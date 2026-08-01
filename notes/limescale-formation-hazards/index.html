@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="喵博士用小猫宇宙解释水垢怎样产生、会带来哪些麻烦，以及怎样安全清理。">
+  <title>喵博士：水垢是怎么产生的？有什么危害？</title>
+  <style>
+    :root {
+      --ink: #252725;
+      --muted: #625f58;
+      --paper: #fffdf5;
+      --paper-deep: #f5ead0;
+      --coral: #d9654c;
+      --teal: #17867d;
+      --blue: #347db4;
+      --yellow: #f2c94f;
+      --green: #4f9459;
+      --red: #b9463e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #dbece7;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .page {
+      width: min(1080px, 100%);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 42px 38px 60px;
+      background-color: var(--paper);
+      background-image:
+        linear-gradient(rgba(220, 194, 145, .18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(220, 194, 145, .13) 1px, transparent 1px);
+      background-size: 54px 54px;
+      box-shadow: 0 0 36px rgba(39, 67, 59, .15);
+    }
+
+    header {
+      padding: 20px 0 34px;
+      border-bottom: 8px solid var(--yellow);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 4px solid var(--ink);
+      background: #fff;
+      font-size: 28px;
+      font-weight: 850;
+      transform: rotate(-1.4deg);
+    }
+
+    h1 {
+      margin: 30px 0 16px;
+      font-size: 66px;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 950px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 34px;
+      line-height: 1.58;
+    }
+
+    section {
+      padding: 38px 0;
+      border-bottom: 4px dashed #decdb0;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: 44px;
+      line-height: 1.28;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 32px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    p,
+    li {
+      font-size: 36px;
+      line-height: 1.72;
+    }
+
+    p {
+      margin: 0 0 24px;
+    }
+
+    strong {
+      font-weight: 900;
+      background: linear-gradient(transparent 59%, rgba(242, 201, 79, .62) 59%);
+    }
+
+    .question {
+      padding: 28px 30px;
+      border-left: 14px solid var(--blue);
+      background: rgba(255, 255, 255, .82);
+      font-size: 42px;
+      line-height: 1.52;
+      font-weight: 900;
+    }
+
+    .answer-strip {
+      margin-top: 28px;
+      padding: 26px 28px;
+      border: 4px solid var(--teal);
+      background: #effaf6;
+      font-size: 36px;
+      line-height: 1.64;
+    }
+
+    .scene img,
+    .map img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 6px solid var(--ink);
+      background: #fff;
+    }
+
+    .caption {
+      margin-top: 22px;
+      padding: 24px 28px;
+      border-left: 12px solid var(--green);
+      background: rgba(255, 255, 255, .84);
+      font-size: 36px;
+      line-height: 1.7;
+    }
+
+    .reaction {
+      margin: 28px 0;
+      padding: 24px 28px;
+      border: 5px solid var(--coral);
+      background: #fff7f0;
+      font-size: 32px;
+      line-height: 1.58;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .reaction code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: .92em;
+    }
+
+    .effect-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .effect {
+      min-height: 230px;
+      padding: 24px;
+      border: 4px solid var(--ink);
+      background: #fff;
+    }
+
+    .effect:nth-child(1) {
+      border-top: 12px solid var(--coral);
+    }
+
+    .effect:nth-child(2) {
+      border-top: 12px solid var(--blue);
+    }
+
+    .effect:nth-child(3) {
+      border-top: 12px solid var(--green);
+    }
+
+    .effect:nth-child(4) {
+      border-top: 12px solid var(--yellow);
+    }
+
+    .effect p {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.58;
+    }
+
+    .boundary,
+    .safety,
+    .experiment {
+      padding: 28px 30px;
+      border: 5px solid var(--blue);
+      background: #f1f8ff;
+    }
+
+    .safety {
+      border-color: var(--red);
+      background: #fff2ef;
+    }
+
+    .experiment {
+      border-color: var(--teal);
+      background: #effaf6;
+    }
+
+    .boundary p:last-child,
+    .safety p:last-child,
+    .experiment p:last-child {
+      margin-bottom: 0;
+    }
+
+    .steps {
+      margin: 18px 0 0;
+      padding-left: 1.25em;
+    }
+
+    .steps li {
+      margin: 12px 0;
+    }
+
+    .sources {
+      color: var(--muted);
+    }
+
+    .sources p,
+    .sources li {
+      font-size: 27px;
+      line-height: 1.6;
+    }
+
+    .sources ul {
+      margin: 0;
+      padding-left: 1.25em;
+    }
+
+    .sources a {
+      color: #165f87;
+      text-underline-offset: 5px;
+    }
+
+    footer {
+      padding-top: 38px;
+    }
+
+    .gold {
+      margin: 0;
+      color: #164e38;
+      font-size: 40px;
+      line-height: 1.58;
+      font-weight: 900;
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        padding: 28px 22px 44px;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      p,
+      li,
+      .subtitle,
+      .caption,
+      .answer-strip {
+        font-size: 26px;
+      }
+
+      .question {
+        font-size: 31px;
+      }
+
+      .tag {
+        font-size: 21px;
+      }
+
+      .reaction {
+        padding: 20px 14px;
+        font-size: 22px;
+      }
+
+      .effect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .effect {
+        min-height: 0;
+      }
+
+      .effect h3 {
+        font-size: 28px;
+      }
+
+      .effect p,
+      .sources p,
+      .sources li {
+        font-size: 23px;
+      }
+
+      .gold {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="tag">Professor Meow Notebook</div>
+      <h1>水垢是怎么产生的？有什么危害？</h1>
+      <p class="subtitle">透明的水里明明什么也看不见，烧过几次以后，壶底为什么会悄悄长出一圈白色硬壳？喵博士和探险家这就把镜头缩小。</p>
+    </header>
+
+    <section>
+      <h2>我们追踪的惊奇问题</h2>
+      <div class="question">水明明是清的，白色水垢是从哪里冒出来的？它会不会把人“毒到”？</div>
+      <div class="answer-strip"><strong>先揭晓：水垢不是壶凭空制造的脏东西。</strong>它主要是水里原本溶解着的钙、镁等矿物，在加热、蒸发或环境变化后聚成的固体。它最常伤的是<strong>热效率、管道和设备</strong>；正常饮用水里的普通水垢通常不是毒物。</div>
+    </section>
+
+    <section>
+      <h2>第一步：核心翻译</h2>
+      <p>在我们的世界里，那其实是<strong>透明水队伍里的矿物小猫，从“分散游泳”变成了“抱团铺砖”</strong>。</p>
+      <p>水流过土壤和岩石时，会带走少量钙、镁。它们小得看不见，分别待在水里，所以一杯硬水仍然可以清澈。这样的水被叫作<strong>硬水</strong>，只是说矿物小猫比较多，不是说水真的摸起来很硬。</p>
+    </section>
+
+    <section class="scene">
+      <h2>场景一：清水里藏着分散的矿物小猫</h2>
+      <img src="assets/scene-1.jpg" alt="清澈硬水中分散着看不见的钙和镁矿物小猫">
+      <div class="caption">白色的钙小猫、绿色的镁小猫各自带着背包，在水里四处运动。它们没有总指挥，也没有排队变成水垢。<strong>只要它们仍然溶解、彼此分散，我们从外面就看不到白色沉积。</strong></div>
+    </section>
+
+    <section class="scene">
+      <h2>场景二：加热和蒸发，让小猫开始“铺砖”</h2>
+      <img src="assets/scene-2.jpg" alt="水受热后蒸发并放出二氧化碳，钙盐形成白色晶体水垢">
+      <div class="caption">加热时，一部分水跑成水蒸气，溶在水里的二氧化碳也更容易离开。原来能待在水里的碳酸氢盐组合发生变化，<strong>钙小猫与碳酸根小猫碰撞后，形成较难溶的碳酸钙晶体</strong>，黏在最热的壶底和加热管上。水不断蒸发，没走掉的矿物还会越来越集中。</div>
+      <div class="reaction"><code>Ca²⁺ + 2HCO₃⁻ → CaCO₃↓ + CO₂↑ + H₂O</code><br>小猫翻译：分散队员重新组队，白色晶体留下，二氧化碳和水汽离开。</div>
+      <p>常见白色水垢主要含<strong>碳酸钙</strong>，也可能混有镁的沉积物和少量其他矿物。水源不同，水垢的组成、颜色和硬度也会不同。</p>
+    </section>
+
+    <section class="scene">
+      <h2>场景三：白色硬壳会带来哪些麻烦？</h2>
+      <img src="assets/scene-3.jpg" alt="水垢覆盖加热盘、缩窄管道并增加清洁负担">
+      <div class="caption">水垢小猫铺出的砖墙不擅长传热。壶和热水器要把热先挤过硬壳，才碰得到水；管道里的硬壳还会一点点占据通道。<strong>危害取决于水垢有多厚、长在哪里，而不是看见一片白就立刻危险。</strong></div>
+
+      <div class="effect-grid" aria-label="水垢的四类影响">
+        <article class="effect">
+          <h3>加热变慢</h3>
+          <p>加热面被隔开后，设备可能耗时更久、耗能更多，还可能出现局部过热和噪声。</p>
+        </article>
+        <article class="effect">
+          <h3>水路变窄</h3>
+          <p>长期积累可缩小管道、喷头或阀门的通道，使水流变小、设备更容易出故障。</p>
+        </article>
+        <article class="effect">
+          <h3>寿命变短</h3>
+          <p>厚水垢会让加热元件和密封部件承受额外负担，增加维修和更换的机会。</p>
+        </article>
+        <article class="effect">
+          <h3>更难清洁</h3>
+          <p>杯壁白斑、龙头硬壳和脱落碎片让人不舒服，粗糙表面也更容易藏住污物。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>水垢会不会伤害身体？</h2>
+      <div class="boundary">
+        <p><strong>普通饮用水中的硬度和水垢，通常不被认为是有毒的。</strong>钙和镁本来就是人体需要的矿物，壶里偶尔掉下一点白色碎屑，也不等于中毒。</p>
+        <p>但这不代表“有水垢的水一定安全”。<strong>水垢只能说明水里有会结晶的矿物，不能替水源做安全证明</strong>；微生物、重金属或其他污染物要靠正规水质检测判断。水出现异常颜色、气味、油膜，或来自不明水源时，不要只盯着水垢猜答案。</p>
+      </div>
+    </section>
+
+    <section class="scene">
+      <h2>场景四：改变条件，我们就能预测水垢</h2>
+      <img src="assets/scene-4.jpg" alt="硬水与软水结垢量对比，并展示断电冷却后用柠檬酸除垢和冲洗">
+      <div class="caption"><strong>矿物越多、反复加热越多、蒸发越多，通常结垢越快。</strong>软水里的矿物小猫少，水垢就少；容器一直补水却很少彻底清空时，留下的矿物会不断累积。食用级柠檬酸能把碳酸钙重新变成可溶的小队员，并冒出二氧化碳气泡，最后用清水冲洗干净。</div>
+    </section>
+
+    <section>
+      <h2>什么时候不会这样？</h2>
+      <p>如果水很软，钙、镁含量低，即使烧水也可能很久看不到明显水垢。含有较多<strong>非碳酸盐硬度</strong>的水，单靠煮沸也未必能去掉多少硬度。反过来，即使没有烧开，水滴在玻璃上慢慢蒸干，矿物小猫照样会留下白斑。</p>
+      <p>所以真正的规律不是“只有开水才有水垢”，而是：<strong>原本溶解的矿物，因为加热、蒸发、二氧化碳逸出或环境改变，变得难溶并留在表面。</strong></p>
+    </section>
+
+    <section>
+      <h2>怎样安全地请水垢离开？</h2>
+      <div class="safety">
+        <p><strong>这一步交给大人。</strong>先拔掉电源，等设备完全冷却，再按照说明书使用食用级柠檬酸或合适的除垢剂；浸泡后倒掉，并用清水充分冲洗。</p>
+        <p><strong>不要把酸性除垢剂和含氯漂白剂混合</strong>，也不要用硬物猛刮加热面。热水器、咖啡机等结构复杂的设备，要遵循厂家说明。</p>
+      </div>
+    </section>
+
+    <section class="map">
+      <h2>一张图收好整条因果链</h2>
+      <img src="assets/mind-map.jpg" alt="水垢形成、影响和减少水垢方法的总结思维图">
+      <div class="caption"><strong>溶解矿物 → 加热或蒸发 → 难溶晶体 → 附着成垢 → 影响设备。</strong>这条桥一旦搭好，探险家看到壶底白圈、玻璃白斑或水流变小时，就能沿着小猫脚印寻找原因。</div>
+    </section>
+
+    <section>
+      <h2>探险家的下一次观察</h2>
+      <div class="experiment">
+        <p>找两个透明小杯，请大人分别滴入一滴自来水和一滴蒸馏水，放在安全处自然晾干。先猜一猜：<strong>哪一滴更可能留下白圈？</strong></p>
+        <p>这个小观察不会测出水是否安全，却能让我们看看：水离开后，谁还留在原地。下一次，我们还可以继续追踪“为什么肥皂在硬水里不容易起泡”。</p>
+      </div>
+    </section>
+
+    <section class="sources">
+      <h2>喵博士的科学书架</h2>
+      <ul>
+        <li><a href="https://www.usgs.gov/water-science-school/science/hardness-water">美国地质调查局：Hardness of Water</a>，介绍硬度、钙镁来源、加热结垢及对管道和设备的影响。</li>
+        <li><a href="https://www.who.int/publications/i/item/9789241563550">世界卫生组织：Calcium and magnesium in drinking-water</a>，讨论饮用水中钙、镁的公共健康意义。</li>
+        <li><a href="https://water.usgs.gov/owq/FAQ.htm">美国地质调查局：Water-Quality FAQ</a>，说明饮用水硬度通常没有基于毒性的法定限值。</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p class="gold">这就是喵博士与探险家共同找到的答案：水垢不是清水里凭空长出的怪东西，而是分散的矿物小猫在条件改变后抱团留下的脚印；它通常不毒，却会给加热器、管道和清洁工作添上越来越厚的负担。</p>
+    </footer>
+  </main>
+</body>
+</html>
