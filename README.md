@@ -20,6 +20,7 @@
 - `notes/tallest-okra-falls-after-typhoon/`：小猫解释万物：台风天之后，最高的秋葵为什么倒了
 - `notes/gua-sha-stomach-pain/`：小猫解释万物：明明刮的是皮肤，肚子里的痛为什么跟着屁跑掉了
 - `notes/gua-sha-red-to-purple/`：小猫解释万物：刮痧后，皮肤为什么会从红变紫
+- `notes/water-freezes-in-freezer/`：小猫解释万物：冰箱里的水为什么会冻成冰块
 
 ## 发布
 

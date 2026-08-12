@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>喵博士：冰箱里的水为什么会冻成冰块？</title>
+  <style>
+    :root {
+      --ink: #24313a;
+      --muted: #5b6a70;
+      --paper: #fffdf7;
+      --blue: #2f83a5;
+      --blue-soft: #e8f5f7;
+      --coral: #ef806f;
+      --yellow: #f5c957;
+      --green: #6baa82;
+      --line: #d8e3df;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: #dfeee9; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(47,131,165,.06) 1px, transparent 1px) 0 0 / 54px 54px,
+        linear-gradient(rgba(47,131,165,.06) 1px, transparent 1px) 0 0 / 54px 54px,
+        var(--paper);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 36px;
+      line-height: 1.7;
+    }
+
+    .note {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 56px 104px;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 900px;
+      margin-bottom: 26px;
+      color: #1d5267;
+      font-size: 68px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin-bottom: 22px;
+      color: #1d5267;
+      font-size: 50px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin-bottom: 12px;
+      color: var(--coral);
+      font-size: 40px;
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+    p { margin-bottom: 24px; }
+    strong { color: #b75045; font-weight: 800; }
+
+    .lead {
+      padding: 28px 34px;
+      border-left: 12px solid var(--yellow);
+      background: #fff7d8;
+      font-size: 40px;
+      line-height: 1.6;
+    }
+
+    .question {
+      margin: 48px 0 70px;
+      padding: 32px 38px;
+      border: 4px dashed var(--blue);
+      background: var(--blue-soft);
+      color: #1d5267;
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .section { margin: 72px 0; }
+    .section-rule {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 22px;
+      color: var(--blue);
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .section-rule::after {
+      content: "";
+      height: 4px;
+      flex: 1;
+      background: var(--yellow);
+    }
+
+    figure { margin: 34px 0 26px; }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 6px solid #fff;
+      box-shadow: 0 8px 0 rgba(47,131,165,.13);
+    }
+    figcaption {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 28px;
+      line-height: 1.55;
+    }
+
+    .fact-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 30px 0;
+    }
+    .fact {
+      padding: 22px 20px;
+      border-top: 10px solid var(--blue);
+      background: #eff8f5;
+      font-size: 30px;
+      line-height: 1.45;
+    }
+    .fact:nth-child(2) { border-top-color: var(--coral); background: #fff0eb; }
+    .fact:nth-child(3) { border-top-color: var(--green); background: #eef7ec; }
+    .fact b { display: block; margin-bottom: 8px; color: #1d5267; font-size: 34px; }
+
+    .prediction {
+      padding: 30px 34px;
+      border: 4px solid var(--green);
+      background: #f0f8e9;
+    }
+    .prediction h3 { color: #3c8055; }
+
+    .ending {
+      margin-top: 76px;
+      padding: 40px 38px;
+      border-top: 10px solid var(--coral);
+      background: #fff0eb;
+    }
+    .quote {
+      color: #9a453e;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    .signature { color: var(--muted); font-size: 30px; }
+
+    @media (max-width: 620px) {
+      .note { width: 100%; padding: 42px 20px 68px; }
+      body { font-size: 36px; }
+      h1 { font-size: 58px; }
+      h2 { font-size: 46px; }
+      h3 { font-size: 38px; }
+      .lead, .question { font-size: 38px; }
+      .fact-strip { grid-template-columns: 1fr; }
+      .fact { font-size: 32px; }
+      figcaption, .signature { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="note">
+    <div class="eyebrow">喵博士解释万物 · 给探险家的冰箱观察课</div>
+    <h1>冰箱里的水为什么会冻成冰块？</h1>
+    <p class="lead">喵呜，答案不是“冰箱把冰塞进了水里”。真正发生的是：<strong>冰箱不断带走水里的热能，让水的小猫们慢下来，并排成一座有秩序的冰晶小城。</strong></p>
+    <div class="question">明明还是同一杯水，为什么它从“会流动”变成了“能拿在手里”？</div>
+
+    <section class="section">
+      <div class="section-rule">第一站 · 核心翻译</div>
+      <h2>在我们的世界里，那其实是……</h2>
+      <p>冰箱里的冷气不是一只“冷冷小猫”钻进水里，而是冰箱的制冷系统把水的热量搬走。水越冷，里面的小水猫就越不容易大幅度乱蹦。</p>
+      <div class="fact-strip">
+        <div class="fact"><b>热量出去</b>水的能量被冰箱搬走，温度下降。</div>
+        <div class="fact"><b>动作变慢</b>水分子仍在动，只是没有那么自由。</div>
+        <div class="fact"><b>队形固定</b>分子排成晶格，流动水变成固体冰。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">第二站 · 故事板 01</div>
+      <h2>冰箱先做的事：把热量带走</h2>
+      <figure>
+        <img src="assets/scene-1.jpg" alt="喵博士在冰箱中观察水和被带走的热量">
+        <figcaption>水一开始有很多热能。冰箱里的制冷系统让热量从水杯出发，经过冰箱内部的循环，最后排到冰箱外面。<strong>“变冷”首先意味着热量减少。</strong></figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">第三站 · 故事板 02</div>
+      <h2>热量少了，小水猫还会动吗？</h2>
+      <figure>
+        <img src="assets/scene-2.jpg" alt="水分子小猫在不同方向随机运动">
+        <figcaption>会动！水里的小猫不会突然“关机”。它们仍然各自乱撞，只是平均运动得更慢。<strong>随机运动没有总指挥</strong>，所以冷却不是让它们乖乖站成一排，而是给结晶创造了机会。</figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">第四站 · 故事板 03</div>
+      <h2>一小块冰晶，成为整队的起点</h2>
+      <figure>
+        <img src="assets/scene-3.jpg" alt="水分子从随机运动开始排列成冰晶晶格">
+        <figcaption>当水冷到接近正常气压下的冰点，某些小水猫会暂时排出稳定的六边形队形，形成“冰晶种子”。周围的小水猫撞过来时，更容易接上这个队形，<strong>晶格就一点点长大</strong>。</figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">第五站 · 故事板 04</div>
+      <h2>队形锁住，水就成了冰</h2>
+      <figure>
+        <img src="assets/scene-4.jpg" alt="液态水经过结晶成长变成固态冰块">
+        <figcaption>结晶结构扩大到整杯水，水分子就不能像液体那样彼此滑过，水便成为固体冰。<strong>到达冰点只是开始，继续带走热量，冰晶才会继续长大。</strong></figcaption>
+      </figure>
+    </section>
+
+    <section class="section prediction">
+      <h3>探险家预测台</h3>
+      <p>如果冰箱更冷、空气流动更顺畅，热量通常会更快离开，结冰会更快。水放得越多，或容器越厚，中心的热量越难出去，就会更慢。</p>
+      <p>但这里有一个重要边界：<strong>不是所有水都在 0℃ 就结冰。</strong>盐水、糖水等混合液的结冰点会改变；冰箱温度不够低时，它们可能仍然是液体。水在密闭硬容器里结冰还会膨胀，所以不要把装满水的玻璃瓶硬塞进冷冻室。</p>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">最后一站 · 总结地图</div>
+      <h2>把整条因果链收进一张图</h2>
+      <figure>
+        <img src="assets/mind-map.jpg" alt="水结冰的喵博士思维图">
+        <figcaption>看见了吗？冰块不是凭空出现的，它是许多看不见的小动作共同留下的结果。</figcaption>
+      </figure>
+    </section>
+
+    <section class="ending">
+      <p class="quote">这就是喵博士与探险家共同找到的答案：冰箱带走热量，水的小猫慢下来并排成晶格，流动的水便长成了可以握住的冰块。</p>
+      <p class="signature">下一次打开冷冻室，你可以猜猜：同样大小的水，放在金属模具和厚玻璃杯里，谁会先结冰？</p>
+    </section>
+  </main>
+</body>
+</html>
