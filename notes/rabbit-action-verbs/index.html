@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>喵博士语录：兔兔的三个动作英文</title>
+  <style>
+    :root {
+      --ink: #26313d;
+      --blue: #66b7e3;
+      --deep-blue: #1d6d95;
+      --coral: #ef806f;
+      --leaf: #5dbd88;
+      --sun: #f4c94d;
+      --violet: #9384d8;
+      --paper: #fffaf0;
+      --line: rgba(89, 139, 168, 0.22);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(var(--line) 2px, transparent 2px) 0 0 / 100% 54px,
+        #f4efe4;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .page {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      padding: 42px 42px 68px;
+      background: rgba(255, 250, 240, 0.96);
+      box-shadow: 0 0 0 1px rgba(38, 49, 61, 0.08), 0 24px 70px rgba(38, 49, 61, 0.13);
+    }
+
+    header {
+      padding: 22px 0 28px;
+      border-bottom: 8px solid rgba(102, 183, 227, 0.36);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 9px 17px;
+      color: #1f5d78;
+      background: rgba(102, 183, 227, 0.16);
+      border: 3px solid rgba(31, 93, 120, 0.2);
+      border-radius: 8px;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    h1 {
+      margin: 23px 0 12px;
+      font-size: clamp(48px, 7vw, 78px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 62px 0 22px;
+      padding-left: 20px;
+      border-left: 12px solid var(--coral);
+      font-size: 47px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 26px 0 8px;
+      font-size: 38px;
+      line-height: 1.25;
+    }
+
+    p, li {
+      font-size: 36px;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    p { margin: 20px 0; }
+    strong { color: var(--deep-blue); font-weight: 900; }
+
+    .note {
+      margin: 30px 0;
+      padding: 26px 29px;
+      background: #fff3b9;
+      border: 4px solid rgba(244, 201, 77, 0.58);
+      border-radius: 8px;
+      transform: rotate(-0.35deg);
+    }
+
+    .verb-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 30px 0 14px;
+    }
+
+    .verb-card {
+      min-width: 0;
+      padding: 22px 18px 24px;
+      border: 4px solid currentColor;
+      border-radius: 8px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .verb-card.jump { color: #d76252; background: #fff0ea; }
+    .verb-card.swim { color: #287ea4; background: #ebf8fd; }
+    .verb-card.fly { color: #6d60ae; background: #f2efff; }
+    .verb-card .word {
+      display: block;
+      font-size: 53px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: 0;
+    }
+    .verb-card .meaning {
+      display: block;
+      margin-top: 13px;
+      color: var(--ink);
+      font-size: 29px;
+      font-weight: 800;
+    }
+    .verb-card .cue {
+      display: block;
+      margin-top: 10px;
+      color: #4f5f6d;
+      font-size: 24px;
+      line-height: 1.35;
+    }
+
+    .steps {
+      margin: 22px 0 0;
+      padding-left: 52px;
+    }
+
+    .scene {
+      margin: 55px 0 64px;
+      padding-bottom: 34px;
+      border-bottom: 4px dashed rgba(38, 49, 61, 0.18);
+    }
+
+    .scene.jump h2 { border-color: var(--coral); }
+    .scene.swim h2 { border-color: var(--blue); }
+    .scene.fly h2 { border-color: var(--violet); }
+    .scene.review h2 { border-color: var(--leaf); }
+
+    .chant {
+      display: inline-block;
+      margin: 7px 0 18px;
+      padding: 10px 18px;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 31px;
+      font-weight: 950;
+      letter-spacing: 1px;
+    }
+
+    .jump .chant { background: var(--coral); }
+    .swim .chant { background: #2e91ba; }
+    .fly .chant { background: var(--violet); }
+    .review .chant { background: var(--leaf); }
+
+    figure { margin: 25px 0 22px; }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 6px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 14px 38px rgba(38, 49, 61, 0.18);
+      background: #fff;
+    }
+
+    figcaption {
+      margin-top: 15px;
+      color: #536272;
+      font-size: 26px;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .memory-rule {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 30px 0;
+    }
+
+    .memory-rule div {
+      padding: 18px 16px;
+      border-top: 7px solid var(--sun);
+      background: rgba(255, 243, 185, 0.72);
+      font-size: 29px;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .quote {
+      margin-top: 42px;
+      padding: 31px;
+      color: #143b4c;
+      background: #dff3eb;
+      border: 5px solid rgba(93, 189, 136, 0.48);
+      border-radius: 8px;
+      font-weight: 900;
+    }
+
+    @media (max-width: 720px) {
+      .page { padding: 29px 21px 46px; }
+      .eyebrow { font-size: 21px; }
+      h1 { font-size: 43px; }
+      h2 { font-size: 34px; }
+      h3 { font-size: 29px; }
+      p, li { font-size: 26px; }
+      figcaption { font-size: 20px; }
+      .verb-grid, .memory-rule { grid-template-columns: 1fr; gap: 13px; }
+      .verb-card { padding: 18px 15px; }
+      .verb-card .word { font-size: 47px; }
+      .verb-card .meaning { font-size: 25px; }
+      .verb-card .cue { font-size: 21px; }
+      .chant { font-size: 25px; }
+      .memory-rule div { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="eyebrow">喵博士的小猫宇宙笔记</div>
+      <h1>兔兔的三个动作英文</h1>
+      <p>喵呜，探险家，今天兔兔带回了三颗会动的英文星星。我们不把它们关进单词本，而是让身体和小猫一起把它们叫醒！</p>
+    </header>
+
+    <section>
+      <h2>一、核心翻译：动作会发光</h2>
+      <p>在我们的世界里，那其实是<strong>每一个动作都有一只负责报信的小猫</strong>。兔兔一动起来，动作小猫就会把英文单词举到空中。</p>
+      <div class="verb-grid">
+        <div class="verb-card jump">
+          <span class="word">JUMP</span>
+          <span class="meaning">跳</span>
+          <span class="cue">身体向上，像弹簧猫</span>
+        </div>
+        <div class="verb-card swim">
+          <span class="word">SWIM</span>
+          <span class="meaning">游泳</span>
+          <span class="cue">手臂划水，像水獭猫</span>
+        </div>
+        <div class="verb-card fly">
+          <span class="word">FLY</span>
+          <span class="meaning">飞</span>
+          <span class="cue">离开地面，像云朵猫</span>
+        </div>
+      </div>
+      <div class="note">
+        <p><strong>记忆小钥匙：</strong>先做动作，再喊英文。身体就是兔兔的第二本单词书。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>二、故事板：兔兔的动作小队</h2>
+      <ol class="steps">
+        <li><strong>往上弹</strong>，小猫举起 <strong>JUMP</strong>。</li>
+        <li><strong>在水里划</strong>，小猫举起 <strong>SWIM</strong>。</li>
+        <li><strong>飞到空中</strong>，小猫举起 <strong>FLY</strong>。</li>
+        <li>三个动作连起来，就是兔兔的<strong>英文动作小队</strong>。</li>
+      </ol>
+    </section>
+
+    <section class="scene jump">
+      <h2>三、第一只动作猫：JUMP</h2>
+      <div class="chant">JUMP! JUMP! JUMP!</div>
+      <p>兔兔的脚爪一蹬，身体离开地面，跳过小石头。<strong>只要身体先向上弹，JUMP 小猫就会亮灯。</strong>喊的时候可以把双手举高，和兔兔一起跳一下。</p>
+      <figure>
+        <img src="assets/scene-1.jpg" alt="Professor Meow teaches a rabbit the word JUMP">
+        <figcaption>动作记忆：双脚轻轻弹起，双手向上，喊出 JUMP。</figcaption>
+      </figure>
+    </section>
+
+    <section class="scene swim">
+      <h2>四、第二只动作猫：SWIM</h2>
+      <div class="chant">SWIM! SWIM! SWIM!</div>
+      <p>兔兔来到蓝色的水面上，手臂一前一后地划，水纹就跟着向后跑，身体向前走。<strong>在水里用手脚移动，就是 SWIM。</strong>喊的时候两只手交替做划水动作。</p>
+      <figure>
+        <img src="assets/scene-2.jpg" alt="Professor Meow teaches a rabbit the word SWIM">
+        <figcaption>动作记忆：手臂交替划水，喊出 SWIM。</figcaption>
+      </figure>
+    </section>
+
+    <section class="scene fly">
+      <h2>五、第三只动作猫：FLY</h2>
+      <div class="chant">FLY! FLY! FLY!</div>
+      <p>兔兔张开翅膀，离开地面，风从身边呼呼跑过，云朵在脚下。<strong>在天空中移动，就是 FLY。</strong>喊的时候张开双臂，像翅膀一样从云朵上飞过去。</p>
+      <figure>
+        <img src="assets/scene-3.jpg" alt="Professor Meow teaches a rabbit the word FLY">
+        <figcaption>动作记忆：张开双臂，身体向前伸，喊出 FLY。</figcaption>
+      </figure>
+    </section>
+
+    <section class="scene review">
+      <h2>六、场景四：三个动作排队出发</h2>
+      <div class="chant">JUMP → SWIM → FLY</div>
+      <p>现在三只动作猫要出发了：先从地面<strong>跳起来</strong>，再到水里<strong>游起来</strong>，最后到天空<strong>飞起来</strong>。顺序不是死记硬背，而是一条兔兔真的走过的路线。</p>
+      <figure>
+        <img src="assets/scene-4.jpg" alt="A rabbit performs JUMP, SWIM, and FLY in sequence">
+        <figcaption>顺着动作路线复习：地面向上是 JUMP，水里前进是 SWIM，天空移动是 FLY。</figcaption>
+      </figure>
+      <div class="memory-rule">
+        <div><strong>JUMP</strong><br>向上弹</div>
+        <div><strong>SWIM</strong><br>水里划</div>
+        <div><strong>FLY</strong><br>空中走</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>七、喵博士总结图</h2>
+      <p>所以，兔兔今天学到的不是三串冷冰冰的字母，而是三种能被身体叫醒的行动：</p>
+      <p><strong>JUMP 是向上，SWIM 是在水里前进，FLY 是在天空中移动。</strong></p>
+      <figure>
+        <img src="assets/mind-map.jpg" alt="Mind map of the action words JUMP SWIM and FLY">
+        <figcaption>总结图：动作、场景和英文单词手拉手，记忆就有了路可以走。</figcaption>
+      </figure>
+      <div class="quote">这就是喵博士与探险家共同找到的答案：让兔兔先动起来，JUMP、SWIM、FLY 三只英文动作猫就会从记忆里跑出来。</div>
+      <p>最后，喵博士把小爪子伸出来问一问：如果兔兔先在水里游，再跳上云朵，哪一只动作猫会先亮灯呢？</p>
+    </section>
+  </main>
+</body>
+</html>
