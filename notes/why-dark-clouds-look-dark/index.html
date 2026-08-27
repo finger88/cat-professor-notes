@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>乌云为什么是乌的｜喵博士解释万物</title>
+  <style>
+    :root {
+      --ink: #25323a;
+      --muted: #5f6b70;
+      --paper: #fffdf7;
+      --sky: #287f9e;
+      --sky-soft: #e8f6f8;
+      --sun: #f4c44f;
+      --coral: #e97864;
+      --green: #579170;
+      --storm: #4f5b66;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: #d9ece8; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(40,127,158,.06) 1px, transparent 1px) 0 0 / 54px 54px,
+        linear-gradient(rgba(40,127,158,.06) 1px, transparent 1px) 0 0 / 54px 54px,
+        var(--paper);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 36px;
+      line-height: 1.7;
+    }
+
+    .note {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 72px 56px 104px;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      color: var(--sky);
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 900px;
+      margin-bottom: 26px;
+      color: #204f62;
+      font-size: 68px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin-bottom: 22px;
+      color: #204f62;
+      font-size: 50px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin-bottom: 12px;
+      color: var(--coral);
+      font-size: 40px;
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+    p { margin-bottom: 24px; }
+    strong { color: #aa493e; font-weight: 800; }
+
+    .lead {
+      padding: 28px 34px;
+      border-left: 12px solid var(--sun);
+      background: #fff7d6;
+      font-size: 40px;
+      line-height: 1.6;
+    }
+
+    .question {
+      margin: 48px 0 70px;
+      padding: 32px 38px;
+      border: 4px dashed var(--sky);
+      background: var(--sky-soft);
+      color: #204f62;
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .section { margin: 72px 0; }
+    .section-rule {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 22px;
+      color: var(--sky);
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .section-rule::after {
+      content: "";
+      height: 4px;
+      flex: 1;
+      background: var(--sun);
+    }
+
+    figure { margin: 34px 0 26px; }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 6px solid #fff;
+      box-shadow: 0 8px 0 rgba(40,127,158,.14);
+    }
+    figcaption {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 28px;
+      line-height: 1.55;
+    }
+
+    .fact-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 30px 0;
+    }
+    .fact {
+      padding: 22px 20px;
+      border-top: 10px solid var(--sky);
+      background: #edf8f6;
+      font-size: 30px;
+      line-height: 1.45;
+    }
+    .fact:nth-child(2) { border-top-color: var(--sun); background: #fff8dc; }
+    .fact:nth-child(3) { border-top-color: var(--storm); background: #edf0f2; }
+    .fact b { display: block; margin-bottom: 8px; color: #204f62; font-size: 34px; }
+
+    .prediction {
+      padding: 30px 34px;
+      border: 4px solid var(--green);
+      background: #eff8ed;
+    }
+    .prediction h3 { color: #397452; }
+
+    .ending {
+      margin-top: 76px;
+      padding: 40px 38px;
+      border-top: 10px solid var(--coral);
+      background: #fff0eb;
+    }
+    .quote {
+      color: #93463d;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    .curiosity { color: var(--muted); font-size: 30px; }
+
+    @media (max-width: 620px) {
+      .note { width: 100%; padding: 42px 20px 68px; }
+      body { font-size: 36px; }
+      h1 { font-size: 58px; }
+      h2 { font-size: 46px; }
+      h3 { font-size: 38px; }
+      .lead, .question { font-size: 38px; }
+      .fact-strip { grid-template-columns: 1fr; }
+      .fact { font-size: 32px; }
+      figcaption, .curiosity { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="note">
+    <div class="eyebrow">喵博士解释万物 · 给探险家的天空观察课</div>
+    <h1>乌云为什么是乌的？</h1>
+    <p class="lead">喵呜，乌云不是被谁涂黑了。真正发生的是：<strong>云变得又厚又密，阳光在里面被许多水滴猫和冰晶猫反复拨向四面八方，能从云底到达我们眼睛的光少了，云底就显得暗。</strong></p>
+    <div class="question">云明明是白色小水滴组成的，为什么聚得多了，下面反而像盖上了一床灰黑色大被子？</div>
+
+    <section class="section">
+      <div class="section-rule">第一站 · 核心翻译</div>
+      <h2>在我们的世界里，那其实是……</h2>
+      <p>一朵云里住着数不清的小水滴猫和冰晶猫。单个成员几乎透明，却很会把阳光拨开。薄云里的光走不了多远就能出来，所以我们收到许多混在一起的各色光，看见的云接近白色。</p>
+      <div class="fact-strip">
+        <div class="fact"><b>成员更多</b>厚云里有更多水滴和冰晶挡在光路上。</div>
+        <div class="fact"><b>转向更多</b>光在云中反复散射，向上方和侧面跑掉。</div>
+        <div class="fact"><b>云底更暗</b>从下方看，能进入眼睛的光变少，于是显得灰黑。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">第二站 · 故事板 01</div>
+      <h2>同一束阳光，遇到薄云和厚云</h2>
+      <figure>
+        <img src="assets/scene-1.jpg" alt="喵博士比较薄云和厚云中的阳光路线">
+        <figcaption>薄云的队伍短，许多阳光还能穿过或很快从云里出来。厚云的队伍又深又密，阳光要经历更多次转向。<strong>决定明暗的不是云有没有“黑颜料”，而是最后有多少光从观察方向来到眼睛。</strong></figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">第三站 · 故事板 02</div>
+      <h2>云里没有总指挥，光却越走越分散</h2>
+      <figure>
+        <img src="assets/scene-2.jpg" alt="阳光在厚云的水滴和冰晶间多次散射">
+        <figcaption>水滴猫和冰晶猫没有商量好要把光藏起来，它们只是各自在遇见光时把它拨向新的方向。次数一多，很多光便从云顶或云侧逃出，少量光还会被吸收。<strong>能够一路到达云底的光越来越少。</strong></figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">第四站 · 故事板 03</div>
+      <h2>同一朵乌云，上面可能白得发亮</h2>
+      <figure>
+        <img src="assets/scene-3.jpg" alt="从云顶和云底观察同一朵厚云">
+        <figcaption>站在云下的探险家，收到的光少，看见灰黑的云底；飞到云上方的喵博士正迎着阳光，能收到许多被云顶拨回来的光，看见的却是亮白色。<strong>“乌”属于光线、厚度和观察位置共同完成的画面。</strong></figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">第五站 · 故事板 04</div>
+      <h2>现在，我们可以预测云的颜色了</h2>
+      <figure>
+        <img src="assets/scene-4.jpg" alt="喵博士预测不同厚度和光照方向下云的明暗">
+        <figcaption>云越厚、里面的水滴和冰晶越多，从云底透过来的光通常越少，看起来也越暗。厚云常和雨一起出现，是因为其中水和冰很多，但<strong>下雨本身不是把云染黑的原因</strong>。夕阳从侧面照来时，云边还可能亮起金橙色。</figcaption>
+      </figure>
+    </section>
+
+    <section class="section prediction">
+      <h3>探险家预测台</h3>
+      <p>如果一朵云继续长高变厚，我们从正下方看，它通常会由白变灰、再变得更暗；如果云被风吹薄，更多光能穿过，云底又会变亮。</p>
+      <p>但这里有边界：<strong>厚云不一定处处都乌，薄云也不一定永远雪白。</strong>云顶、云边和迎光的一侧可以很亮；太阳快落山、周围天空特别亮，或者夜晚没有阳光时，我们看见的颜色也会改变。云的颜色是光送来的线索，不是一张固定身份证。</p>
+    </section>
+
+    <section class="section">
+      <div class="section-rule">最后一站 · 总结地图</div>
+      <h2>把整条因果链收进一张图</h2>
+      <figure>
+        <img src="assets/mind-map.jpg" alt="乌云形成暗色云底的喵博士思维图">
+        <figcaption>水滴和冰晶变多，光经历更多次转向，云底收到的光减少，我们便看见了乌云。换一个位置，答案也可能换一种亮度。</figcaption>
+      </figure>
+    </section>
+
+    <section class="ending">
+      <p class="quote">这就是喵博士与探险家共同找到的答案：乌云不是天生乌黑，而是厚密的云把阳光拨向了别处，让云下的我们只收到较少的光。</p>
+      <p class="curiosity">下一次看见乌云边缘发亮，你愿意画一画太阳、云和自己分别站在哪里吗？那张图会成为我们的下一条天空线索。</p>
+    </section>
+  </main>
+</body>
+</html>
