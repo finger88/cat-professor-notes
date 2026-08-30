@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小猫解释万物：电线里面有没有电</title>
+  <style>
+    :root {
+      --ink: #302a27;
+      --soft-ink: #675b55;
+      --paper: #fffaf0;
+      --grid: #eadfc8;
+      --mint: #dcefdc;
+      --sky: #d9ecfb;
+      --peach: #ffd8c7;
+      --yellow: #f6ca58;
+      --coral: #c84f5f;
+      --copper: #b45d32;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        linear-gradient(90deg, rgba(234, 223, 200, .5) 1px, transparent 1px) 0 0 / 54px 54px,
+        linear-gradient(rgba(234, 223, 200, .5) 1px, transparent 1px) 0 0 / 54px 54px,
+        #f2ead8;
+    }
+
+    main {
+      width: min(1080px, 100vw);
+      margin: 0 auto;
+      padding: 44px 42px 72px;
+      overflow: hidden;
+      background: var(--paper);
+      box-shadow: 0 24px 80px rgba(73, 55, 41, .16);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--mint);
+      border: 3px solid rgba(48, 42, 39, .12);
+      transform: rotate(-1deg);
+      color: var(--soft-ink);
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 20px 0 24px;
+      font-size: 64px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 62px 0 22px;
+      padding-left: 20px;
+      border-left: 12px solid var(--yellow);
+      font-size: 44px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    p, li {
+      font-size: 36px;
+      line-height: 1.66;
+      letter-spacing: 0;
+    }
+
+    p { margin: 20px 0; }
+    strong { color: #ad3f53; font-weight: 900; }
+
+    .opening,
+    .storyboard,
+    .answer,
+    .experiment,
+    .small-note {
+      padding: 28px 32px;
+      border-radius: 8px;
+    }
+
+    .opening {
+      background: #fff;
+      border: 4px solid rgba(48, 42, 39, .12);
+      box-shadow: 9px 9px 0 rgba(246, 202, 88, .25);
+    }
+
+    .question {
+      margin: 34px 0;
+      padding: 26px 30px;
+      background: var(--peach);
+      border-left: 14px solid var(--coral);
+      font-size: 40px;
+      line-height: 1.5;
+      font-weight: 900;
+    }
+
+    .answer {
+      margin: 34px 0;
+      background: var(--sky);
+      border: 3px dashed rgba(48, 42, 39, .24);
+    }
+
+    .storyboard {
+      background: var(--mint);
+      border: 3px dashed rgba(48, 42, 39, .24);
+    }
+
+    .storyboard ol { margin: 0; padding-left: 50px; }
+
+    .scene {
+      margin: 34px 0 56px;
+      padding-bottom: 28px;
+      border-bottom: 5px dotted var(--grid);
+    }
+
+    .scene img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 4px solid rgba(48, 42, 39, .15);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .caption {
+      margin-top: 24px;
+      padding: 0 8px;
+    }
+
+    .three-meanings {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 30px 0;
+    }
+
+    .meaning {
+      min-width: 0;
+      padding: 24px 18px;
+      border: 3px solid rgba(48, 42, 39, .13);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .meaning:nth-child(1) { background: #e4f1ff; }
+    .meaning:nth-child(2) { background: #fff0bd; }
+    .meaning:nth-child(3) { background: #ffdcd2; }
+    .meaning b { display: block; color: var(--copper); font-size: 34px; }
+    .meaning span { display: block; margin-top: 8px; font-size: 28px; line-height: 1.45; }
+
+    .experiment {
+      margin-top: 34px;
+      background: #fff1bd;
+      border: 3px solid rgba(48, 42, 39, .13);
+    }
+
+    .small-note {
+      margin: 30px 0;
+      color: var(--soft-ink);
+      background: #f4f0e8;
+      border: 3px solid rgba(48, 42, 39, .1);
+    }
+
+    .mind-map img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 4px solid rgba(48, 42, 39, .15);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .quote {
+      margin-top: 48px;
+      padding: 36px;
+      background: #ffe4ea;
+      border-left: 14px solid var(--coral);
+      border-radius: 8px;
+      font-size: 40px;
+      line-height: 1.55;
+      font-weight: 900;
+    }
+
+    @media (max-width: 720px) {
+      main { padding: 30px 24px 52px; }
+      h1 { font-size: 48px; }
+      h2 { font-size: 38px; }
+      p, li { font-size: 30px; }
+      .question, .quote { font-size: 34px; }
+      .three-meanings { grid-template-columns: 1fr; }
+      .meaning b { font-size: 32px; }
+      .meaning span { font-size: 27px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Professor Meow's notebook</div>
+    <h1>小猫解释万物：电线里面有没有电？</h1>
+
+    <section class="opening">
+      <p><strong>在我们的世界里，那其实是……一条住着许多电子小猫的铜质隧道。</strong></p>
+      <p>喵呜，兔兔提出了一个非常厉害的问题。你们剪下的电线明明没有连着电源，里面却本来就有带电荷的电子。</p>
+    </section>
+
+    <div class="question">惊奇铰链：明明电线里住着电子小猫，为什么我们还说“这根线没电”？</div>
+
+    <section class="answer">
+      <p>因为人们说“电”时，常常把三件不同的事混在一起：</p>
+      <div class="three-meanings">
+        <div class="meaning"><b>电荷</b><span>电子小猫本来就在金属里</span></div>
+        <div class="meaning"><b>电压</b><span>电源给小猫们的“推动”</span></div>
+        <div class="meaning"><b>电流</b><span>小猫们朝同一方向整体移动</span></div>
+      </div>
+      <p>所以最准确的回答是：<strong>那段断开的电线里有电荷，但没有电源施加的危险电压，也没有持续电流。</strong>平时说“它没电”，指的就是后两件事。</p>
+    </section>
+
+    <h2>故事板构建</h2>
+    <section class="storyboard">
+      <ol>
+        <li><strong>剪下的电线：</strong>电子小猫还在，但没有统一的推动。</li>
+        <li><strong>电从哪来：</strong>电池用化学能，发电机用运动和磁场，造出电压推动。</li>
+        <li><strong>回路接通：</strong>小猫们在完整圈路上一起漂移，电能变成灯的光和热。</li>
+        <li><strong>回路断开：</strong>圈路有缺口，持续电流就停下；陌生电线仍要先断电、再检测。</li>
+      </ol>
+    </section>
+
+    <h2>画面一：电子小猫本来就在线里</h2>
+    <section class="scene">
+      <img src="assets/scene-1.jpg" alt="断开的铜线里有电子小猫，但没有电压和电流">
+      <div class="caption">
+        <p>把电线放大，会看到里面的铜由原子组成，其中有些电子可以在金属里移动。没有电源时，它们仍在做零零碎碎的运动，却没有大家一起前进的方向。</p>
+        <p><strong>有电子，不等于有电流。</strong>就像走廊里有很多小猫，不等于它们正在排队向前走。</p>
+      </div>
+    </section>
+
+    <h2>画面二：电不是凭空蹦出来的</h2>
+    <section class="scene">
+      <img src="assets/scene-2.jpg" alt="电池和发电机把其他能量转换成电能">
+      <div class="caption">
+        <p>电池工坊里，化学反应小猫把正负电荷分开，两端便出现了<strong>电压</strong>。它就像起点与终点之间的高度差，能推动电子小猫。</p>
+        <p>发电机里，水、风、蒸汽或其他动力带着磁铁与线圈相对运动，变化的磁场便会在导线中造出电压。<strong>我们不是创造电荷，而是把化学能、运动能等转换成电能。</strong></p>
+      </div>
+    </section>
+
+    <h2>画面三：完整的圈路让灯亮起来</h2>
+    <section class="scene">
+      <img src="assets/scene-3.jpg" alt="闭合回路中的电压、电流与灯泡发光">
+      <div class="caption">
+        <p>当电池、电线和灯连成一个完整圈路，电场的号令会很快传遍回路。线里的电子小猫同时开始缓慢漂移，形成<strong>电流</strong>。</p>
+        <p>某一只电子小猫不需要从电厂狂奔到你家。它们更像挤满了管道的队伍：一端一推，整条队伍就几乎同时开始挪动。电能送到灯中，变成了<strong>光和热</strong>。</p>
+      </div>
+    </section>
+
+    <h2>画面四：路一断，持续电流就停</h2>
+    <section class="scene">
+      <img src="assets/scene-4.jpg" alt="断开回路中没有持续电流，陌生电线要断电检测">
+      <div class="caption">
+        <p>开关打开，圈路出现缺口，电子小猫无法绕着完整路线持续移动，灯便不亮了。只把一根线接到电池的一端，也不会让普通灯泡持续发光，因为<strong>回路还没封闭</strong>。</p>
+        <p>但外表不能告诉我们一根陌生电线是否真的断电。所以喵博士的安全规则是：<strong>不猜、不碰、不剪；先由大人断开电源，需要操作时再用合适工具确认没有电压。</strong></p>
+      </div>
+    </section>
+
+    <section class="small-note">
+      <p><strong>还有一个小边界：</strong>断开的电线表面偶尔也可能因摩擦带上一点静电，就像秋冬脱毛衣时的“啪”一声。它与电源连接后能持续送来的电流，是不同的情况。</p>
+    </section>
+
+    <section class="experiment">
+      <p><strong>可预测的下一步：</strong>用儿童低压电路套件，把电池、开关和小灯连成圈。兔兔可以先猜：开关闭合时，哪些小猫开始行动？只要在任意一处打开缺口，灯又会怎样？</p>
+    </section>
+
+    <h2>总结思维图</h2>
+    <section class="mind-map">
+      <img src="assets/mind-map.jpg" alt="电线、电源、闭合回路和安全规则思维图">
+      <p>从今天起，兔兔看到的就不再只是一根电线了：里面有电荷，电源提供电压，完整回路才能让电流持续流动，而电能会在灯里变成我们看得见的光。</p>
+    </section>
+
+    <div class="quote">这就是喵博士与探险家共同找到的答案：电线里一直有电荷小猫，但只有电源给出推动、回路又完整时，它们才能排成电流，把能量送到光里。</div>
+  </main>
+</body>
+</html>

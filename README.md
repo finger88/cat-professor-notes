@@ -24,6 +24,7 @@
 - `notes/gua-sha-red-to-purple/`：小猫解释万物：刮痧后，皮肤为什么会从红变紫
 - `notes/water-freezes-in-freezer/`：小猫解释万物：冰箱里的水为什么会冻成冰块
 - `notes/why-dark-clouds-look-dark/`：小猫解释万物：乌云为什么是乌的
+- `notes/what-is-in-an-electric-wire/`：小猫解释万物：电线里面有没有电
 
 ## 发布
 
