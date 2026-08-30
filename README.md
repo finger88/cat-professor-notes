@@ -10,6 +10,7 @@
 
 当前示例：
 
+- `notes/water-wrinkled-fingers/`：小猫解释万物：手放在水里泡太久为什么会发皱
 - `notes/rabbit-action-verbs/`：小猫解释万物：兔兔的三个动作英文
 - `notes/bathroom-biofilm/`：小猫解释万物：浴室里黏黏滑滑的绿膜是什么
 - `notes/limescale-formation-hazards/`：小猫解释万物：水垢是怎么产生的，有什么危害
