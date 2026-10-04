@@ -10,6 +10,7 @@
 
 当前示例：
 
+- `notes/water-in-a-towel/`：小猫解释万物：水小猫住进浴巾以后，兔兔的三个浴室问号
 - `notes/digestion/`：小猫解释万物：消化，吞下去就算吃完了吗？
 - `notes/why-penis-inflammation/`：小猫解释万物：小鸡鸡为什么会发炎
 - `notes/water-wrinkled-fingers/`：小猫解释万物：手放在水里泡太久为什么会发皱
