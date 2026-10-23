@@ -10,6 +10,7 @@
 
 当前示例：
 
+- `notes/air-cannon-invisible-push/`：小猫解释万物：空气大炮，是谁推倒了杯子？
 - `notes/water-in-a-towel/`：小猫解释万物：水小猫住进浴巾以后，兔兔的三个浴室问号
 - `notes/digestion/`：小猫解释万物：消化，吞下去就算吃完了吗？
 - `notes/why-penis-inflammation/`：小猫解释万物：小鸡鸡为什么会发炎
